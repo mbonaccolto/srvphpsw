@@ -19,45 +19,6 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
-/*
-$answers = array(
-  "Per quanto posso vedere, sì",
-  "È certo",
-  "È decisamente così",
-  "Molto probabilmente",
-  "Le prospettive sono buone",
-  "I segni indicano di sì",
-  "Senza alcun dubbio",
-  "Sì",
-  "Sì",
-  "Ci puoi contare",
-  "È difficile rispondere, prova di nuovo",
-  "Rifai la domanda più tardi",
-  "Meglio non risponderti adesso",
-  "Non posso predirlo ora",
-  "Concentrati e rifai la domanda",
-  "Non ci contare",
-  "La mia risposta è no",
-  "Le mie fonti dicono di no",
-  "Le prospettive non sono buone",
-  "Molto incerto"
-);
-
-$answer = '';
-
-if (!$text) {
-  // Verificare che l'ultimo carattere sia un punto di domanda
-    if ($text[sizeof($text) - 1] == '?') {
-    // Da qui mandi la risposta
-    $answer = $answers[rand(0, sizeof($answers)-1)];
-    } 
-    else {
-      // Da qui gli mandi "ehy fammi una domanda"
-      $answer = "Per poterti rispondere, mi devi fare una domanda...";
-    }
-}
-*/
-
 if ($text == '/bullismo') {
   header("Content-Type: application/json");
   $answer = "Dovrei dare delle info sul bullismo... Per adesso Maurizio mi ha programmato con questa frase inutile :(";
@@ -65,9 +26,50 @@ if ($text == '/bullismo') {
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+if ($text == '/relazioni') {
+  header("Content-Type: application/json");
+  $answer = "Dovrei dare delle info sulle relazioni... Anche qua Maurizio mi ha programmato con una risposta inutile. Mi spiace...";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sessualita') {
+  header("Content-Type: application/json");
+  $answer = "Dovrei dare delle info sulla sessualità... ma non sono ancora pronto! :)";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sostanze') {
+  header("Content-Type: application/json");
+  $answer = "Che dire sulle sostanze? Non ho ancora un'opinione chiara :)";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/contraccezione') {
+  header("Content-Type: application/json");
+  $answer = "Attenti alle malattie /ist e alle gravidanze indesiderate!";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/ist') {
+  header("Content-Type: application/json");
+  $answer = "Qua parliamo di infezioni sessualmente trasmissibili. E per ora non ne so abbastanza...";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
   
 header("Content-Type: application/json");
-$parameters = array('chat_id' => $chatId, "text" => $text);
+$parameters = array('chat_id' => $chatId, "text" => "Se non utilizzi i comandi mi limito a ripetere ciò che mi hai scritto: ".$text);
 // $parameters = array('chat_id' => $chatId, "text" => $answer);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
