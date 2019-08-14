@@ -60,7 +60,7 @@ if (!$text) {
 
 if ($text == '/bullismo') {
   header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sul bullismo...";
+  $answer = "Dovrei dare delle info sul bullismo... Per adesso Maurizio mi ha programmato con questa frase inutile :(";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
