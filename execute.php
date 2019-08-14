@@ -58,6 +58,14 @@ if (!$text) {
 }
 */
 
+if ($text == '/bullismo') {
+  header("Content-Type: application/json");
+  $answer = "Dovrei dare delle info sul bullismo...";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+  
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => $text);
 // $parameters = array('chat_id' => $chatId, "text" => $answer);
