@@ -42,6 +42,8 @@ $answers = array(
   "Molto incerto"
 );
 
+$answer = '';
+
 if (!$text) {
   // Verificare che l'ultimo carattere sia un punto di domanda
     if ($text[sizeof($text) - 1] == '?') {
