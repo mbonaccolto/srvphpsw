@@ -19,6 +19,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
+/*
 $answers = array(
   "Per quanto posso vedere, sì",
   "È certo",
@@ -55,9 +56,10 @@ if (!$text) {
       $answer = "Per poterti rispondere, mi devi fare una domanda...";
     }
 }
+*/
 
 header("Content-Type: application/json");
-// $parameters = array('chat_id' => $chatId, "text" => $text);
-$parameters = array('chat_id' => $chatId, "text" => $answer);
+$parameters = array('chat_id' => $chatId, "text" => $text);
+// $parameters = array('chat_id' => $chatId, "text" => $answer);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
