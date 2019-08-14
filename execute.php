@@ -45,7 +45,7 @@ if ($text == '/sessualita') {
 
 if ($text == '/sostanze') {
   header("Content-Type: application/json");
-  $answer = "Che dire sulle sostanze? Non ho ancora un'opinione chiara :)";
+  $answer = "Ci sono un sacco di leggi contro l'abuso di sostanze :)";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -63,6 +63,14 @@ if ($text == '/contraccezione') {
 if ($text == '/ist') {
   header("Content-Type: application/json");
   $answer = "Qua parliamo di infezioni sessualmente trasmissibili. E per ora non ne so abbastanza...";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/start') {
+  header("Content-Type: application/json");
+  $answer = "EducaPari BOT è un roBOT di ATS Milano che risponde a domande, dubbi e perplessità degli educatori tra pari.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
