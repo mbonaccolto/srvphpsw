@@ -107,7 +107,7 @@ if ($text == '/attivitafisica') {
 
 if ($text == '/impariamoascegliere') {
   header("Content-Type: application/json");
-  $answer = "Impariamo a scegliere:
+  $answer = "Impariamo a scegliere: 
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/2018%20impariamo%20a%20scegliere...%20anche%20a%20tavola!-1_1ffa7046-61b8-442f-848f-6dc1c022159b.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
