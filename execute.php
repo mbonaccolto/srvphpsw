@@ -76,6 +76,17 @@ if ($text == '/foodgame') {
   echo json_encode($parameters);
 }
 
+if ($text == '/materialedidattico') {
+  header("Content-Type: application/json");
+  $answer = "Ecco un po' di file...
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Alimentazione%20sostenibile_67dc0fa3-8911-43d3-8030-198eb56fef48.pdf
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Carta%20di%20MIlano_696adf84-ff83-4400-a324-1c3124d5674a.pdf
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/All%20Attivita%20fisica%20dico%20SI_a96a5ba0-416c-46b9-90b2-24e4d4cb0b37.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 if ($text == '/start') {
   header("Content-Type: application/json");
   $answer = "EducaPari BOT è un roBOT di ATS Milano che risponde a domande, dubbi e perplessità degli educatori tra pari.";
