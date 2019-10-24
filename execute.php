@@ -80,7 +80,7 @@ if ($text == '/materialedidattico') {
   header("Content-Type: application/json");
   $answer = "Alimentazione sostenibile:
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Alimentazione%20sostenibile_67dc0fa3-8911-43d3-8030-198eb56fef48.pdf
-  /materialedidattico2";
+  clicca per altro materiale: /materialedidattico2";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters); 
@@ -88,9 +88,9 @@ if ($text == '/materialedidattico') {
 
 if ($text == '/materialedidattico2') {
   header("Content-Type: application/json");
-  $answer = "Attività fisica
+  $answer = "Attività fisica:
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/All%20Attivita%20fisica%20dico%20SI_a96a5ba0-416c-46b9-90b2-24e4d4cb0b37.pdf
-  /materialedidattico3";
+  clicca per altro materiale: /materialedidattico3";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters); 
@@ -99,7 +99,7 @@ if ($text == '/materialedidattico2') {
 
 if ($text == '/materialedidattico3') {
   header("Content-Type: application/json");
-  $answer = "Attività fisica
+  $answer = "Impariamo a scegliere:
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/2018%20impariamo%20a%20scegliere...%20anche%20a%20tavola!-1_1ffa7046-61b8-442f-848f-6dc1c022159b.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
