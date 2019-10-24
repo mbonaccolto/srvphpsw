@@ -68,6 +68,14 @@ if ($text == '/ist') {
   echo json_encode($parameters);
 }
 
+if ($text == '/foodgame') {
+  header("Content-Type: application/json");
+  $answer = "https://www.youtube.com/watch?v=VTXsXvpNGe0";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 if ($text == '/start') {
   header("Content-Type: application/json");
   $answer = "EducaPari BOT è un roBOT di ATS Milano che risponde a domande, dubbi e perplessità degli educatori tra pari.";
