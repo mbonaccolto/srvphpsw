@@ -84,13 +84,13 @@ if ($text == '/materialedidattico') {
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
   
-  $answer ="https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Carta%20di%20MIlano_696adf84-ff83-4400-a324-1c3124d5674a.pdf";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $answer1 ="https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Carta%20di%20MIlano_696adf84-ff83-4400-a324-1c3124d5674a.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer1);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
   
-  $answer ="https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/All%20Attivita%20fisica%20dico%20SI_a96a5ba0-416c-46b9-90b2-24e4d4cb0b37.pdf";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $answer2 ="https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/All%20Attivita%20fisica%20dico%20SI_a96a5ba0-416c-46b9-90b2-24e4d4cb0b37.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer2);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
   
