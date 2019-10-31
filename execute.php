@@ -26,8 +26,6 @@ if ($text == '/bullismo') {
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
-
-
   
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
@@ -37,6 +35,89 @@ if ($text == '/foodgame') {
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+if ($text == '/materialedidattico') {
+  header("Content-Type: application/json");
+  $answer = "Clicca su un comando per scaricare il materiale didattico desiderato:
+  /alimentazione_sostenibile
+  /scegliere_a_tavola
+  /attivita_fisica
+  /materialedidattico
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+// sottocomandi /materialedidattico
+
+if ($text == '/alimentazione_sostenibile') {
+  header("Content-Type: application/json");
+  $answer = "Alimentazione sostenibile:
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Alimentazione%20sostenibile_67dc0fa3-8911-43d3-8030-198eb56fef48.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/scegliere_a_tavola') {
+  header("Content-Type: application/json");
+  $answer = "FoodGame: impariamo a scegliere anche a tavola...
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/2018%20impariamo%20a%20scegliere...%20anche%20a%20tavola!-1_1ffa7046-61b8-442f-848f-6dc1c022159b.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/attivita_fisica') {
+  header("Content-Type: application/json");
+  $answer = "L'importanza dell'attività fisica:
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/All%20Attivita%20fisica%20dico%20SI_a96a5ba0-416c-46b9-90b2-24e4d4cb0b37.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/materialedidattico') {
+  header("Content-Type: application/json");
+  $answer = "La Carta di Milano (non è una mappa!):
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Carta%20di%20MIlano_696adf84-ff83-4400-a324-1c3124d5674a.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+// fine sottocomando /materialedidattico
+
+if ($text == '/tappa_1') {
+  header("Content-Type: application/json");
+  $answer = "FoodGame ATS Milano Città Metropolitana:
+  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/opuscolo') {
+  header("Content-Type: application/json");
+  $answer = "FoodGame ATS Milano Città Metropolitana:
+  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/report') {
+  header("Content-Type: application/json");
+  $answer = "FoodGame ATS Milano Città Metropolitana:
+  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
 
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => "Se non utilizzi i comandi mi limito a ripetere ciò che mi hai scritto: ".$text);
