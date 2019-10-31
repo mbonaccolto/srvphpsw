@@ -92,7 +92,7 @@ if ($text == '/materialedidattico') {
 
 if ($text == '/tappa_1') {
   header("Content-Type: application/json");
-  $answer = "Completa la 1° tappa, completa il test di squadra!
+  $answer = "Completa la 1° tappa, fai il test di squadra!
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/tappa%201TEST%20SQUADRA_a8160673-1c46-4a08-a07c-441d727b1d9b.doc";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
