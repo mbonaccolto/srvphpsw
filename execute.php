@@ -137,3 +137,4 @@ $parameters = array('chat_id' => $chatId, "text" => "Se non utilizzi i comandi m
 // $parameters = array('chat_id' => $chatId, "text" => $answer);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
+
