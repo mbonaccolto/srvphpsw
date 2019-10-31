@@ -21,56 +21,18 @@ $text = strtolower($text);
 
 if ($text == '/bullismo') {
   header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sul bullismo... Per adesso Maurizio mi ha programmato con questa frase inutile :(";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
-
-if ($text == '/relazioni') {
-  header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sulle relazioni... Anche qua Maurizio mi ha programmato con una risposta inutile. Mi spiace...";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
-
-if ($text == '/sessualita') {
-  header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sulla sessualità... ma non sono ancora pronto! :)";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
-
-if ($text == '/sostanze') {
-  header("Content-Type: application/json");
-  $answer = "Che dire sulle sostanze? Non ho ancora un'opinione chiara :)";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
-
-if ($text == '/contraccezione') {
-  header("Content-Type: application/json");
-  $answer = "Attenti alle malattie /ist e alle gravidanze indesiderate!";
+  $answer = "per questa tematica dovresti contattare @EducapariBOT";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
 
 
-if ($text == '/ist') {
-  header("Content-Type: application/json");
-  $answer = "Qua parliamo di infezioni sessualmente trasmissibili. E per ora non ne so abbastanza...";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
   
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
-  $answer = "Informazioni varie su FoodGame";
+  $answer = "FoodGame ATS Milano Città Metropolitana:
+  https://www.youtube.com/watch?v=bI49ztuP4Jg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
