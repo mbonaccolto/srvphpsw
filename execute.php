@@ -68,6 +68,14 @@ if ($text == '/ist') {
   echo json_encode($parameters);
 }
   
+if ($text == '/foodgame') {
+  header("Content-Type: application/json");
+  $answer = "Informazioni varie su FoodGame";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => "Se non utilizzi i comandi mi limito a ripetere ciò che mi hai scritto: ".$text);
 // $parameters = array('chat_id' => $chatId, "text" => $answer);
