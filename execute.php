@@ -32,7 +32,7 @@ if ($text == '/bullismo') {
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
   $answer = "FoodGame ATS Milano Città Metropolitana:
-  https://www.youtube.com/watch?v=bI49ztuP4Jg";
+  https://www.youtube.com/watch?v=sB_e7odulS0";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
