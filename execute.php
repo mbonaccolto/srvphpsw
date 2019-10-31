@@ -21,7 +21,7 @@ $text = strtolower($text);
 
 if ($text == '/bullismo') {
   header("Content-Type: application/json");
-  $answer = "per questa tematica dovresti contattare @EducapariBOT";
+  $answer = "per questa tematica dovresti contattare @EducaPari_bot";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
