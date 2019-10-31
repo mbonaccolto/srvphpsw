@@ -26,6 +26,27 @@ if ($text == '/bullismo') {
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+if ($text == '/start') {
+  header("Content-Type: application/json");
+  $answer = "Ciao, puoi iniziare a interagire con me digitando un comando con il carattere /. Oppure clicca sulla: /listacomandi";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/listacomandi') {
+  header("Content-Type: application/json");
+  $answer = "/foodgame - Intro sul gioco
+  /materialedidattico - scarica il materiale didattico
+  /tappa_1 - 1° tappa
+  /opuscolo - opuscolo 2019
+  /report - report delle tappe
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
   
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
