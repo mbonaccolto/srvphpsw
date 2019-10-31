@@ -92,8 +92,8 @@ if ($text == '/materialedidattico') {
 
 if ($text == '/tappa_1') {
   header("Content-Type: application/json");
-  $answer = "FoodGame ATS Milano Città Metropolitana:
-  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $answer = "Completa la 1° tappa, completa il test di squadra!
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/tappa%201TEST%20SQUADRA_a8160673-1c46-4a08-a07c-441d727b1d9b.doc";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -101,8 +101,8 @@ if ($text == '/tappa_1') {
 
 if ($text == '/opuscolo') {
   header("Content-Type: application/json");
-  $answer = "FoodGame ATS Milano Città Metropolitana:
-  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $answer = "Opuscolo FoodGame 2019:
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/FoodGame%202019%20Opuscolo_rev_1_0_2a404161-b9db-48b0-888a-c8632e30dcaf.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -110,8 +110,8 @@ if ($text == '/opuscolo') {
 
 if ($text == '/report') {
   header("Content-Type: application/json");
-  $answer = "FoodGame ATS Milano Città Metropolitana:
-  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $answer = "Report delle tappe del Food Game:
+  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/REPORT%20TAPPE%20FG_6f34c716-3cb0-47dd-8b5a-d55c5022b580.doc";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
