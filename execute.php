@@ -63,7 +63,7 @@ if ($text == '/materialedidattico') {
   /alimentazione_sostenibile
   /scegliere_a_tavola
   /attivita_fisica
-  /materialedidattico
+  /carta_di_milano
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -100,7 +100,7 @@ if ($text == '/attivita_fisica') {
 }
 
 
-if ($text == '/materialedidattico') {
+if ($text == '/carta_di_milano') {
   header("Content-Type: application/json");
   $answer = "La Carta di Milano (non è una mappa!):
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Carta%20di%20MIlano_696adf84-ff83-4400-a324-1c3124d5674a.pdf";
