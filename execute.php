@@ -137,8 +137,7 @@ if ($text == '/report') {
   echo json_encode($parameters);
 }
 
-
-
+// fine comandi
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => "Se non utilizzi i comandi mi limito a ripetere ciò che mi hai scritto: ".$text);
 // $parameters = array('chat_id' => $chatId, "text" => $answer);
