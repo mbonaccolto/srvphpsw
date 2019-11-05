@@ -99,7 +99,6 @@ if ($text == '/attivita_fisica') {
   echo json_encode($parameters);
 }
 
-
 if ($text == '/carta_di_milano') {
   header("Content-Type: application/json");
   $answer = "La Carta di Milano (non è una mappa!):
