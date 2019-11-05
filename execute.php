@@ -63,8 +63,7 @@ if ($text == '/materialedidattico') {
   /alimentazione_sostenibile
   /scegliere_a_tavola
   /attivita_fisica
-  /carta_di_milano
-  ";
+  /carta_di_milano";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
