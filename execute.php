@@ -72,10 +72,26 @@ if ($text == '/materialedidattico') {
 
 if ($text == '/presentazione') {
   header("Content-Type: application/json");
-  $answer = "Scarica il file desiderato.
-  Presentazione FoodGame:
-  https://socialmi.ats-milano.it/165/social/wiki/UcSmMJHujJRA4h_11112019_PAOLAFISCHERpresentazionefoodgame.pdf
-  Evoluzione componente digitale: 
+  $answer = "Scegli il file desiderato.
+  Presentazione FoodGame: /pf
+  Evoluzione componente digitale: /bc";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/pf') {
+  header("Content-Type: application/json");
+  $answer = "Presentazione FoodGame:
+  https://socialmi.ats-milano.it/165/social/wiki/UcSmMJHujJRA4h_11112019_PAOLAFISCHERpresentazionefoodgame.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/bc') {
+  header("Content-Type: application/json");
+  $answer = "Evoluzione componente digitale: 
   https://socialmi.ats-milano.it/165/social/wiki/Ucfy6YBOYzz58O_11112019_BENEDETTACHIAVEGATTIEvoluzionedellacomponentedigitale.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
