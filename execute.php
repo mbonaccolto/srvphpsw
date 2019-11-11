@@ -70,7 +70,7 @@ if ($text == '/ist') {
 
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
-  $answer = "https://www.youtube.com/watch?v=VTXsXvpNGe0";
+  $answer = "per questa tematica dovresti contattare @FoodGame_BOT";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -88,8 +88,7 @@ if ($text == '/materialedidattico') {
 } 
 
 if ($text == '/alimentazionesostenibile') {
-  $answer = "Alimentazione sostenibile:
-  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Alimentazione%20sostenibile_67dc0fa3-8911-43d3-8030-198eb56fef48.pdf";
+  $answer = "per questa tematica dovresti contattare @FoodGame_BOT";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters); 
@@ -107,8 +106,7 @@ if ($text == '/attivitafisica') {
 
 if ($text == '/impariamoascegliere') {
   header("Content-Type: application/json");
-  $answer = "Impariamo a scegliere: 
-  https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/2018%20impariamo%20a%20scegliere...%20anche%20a%20tavola!-1_1ffa7046-61b8-442f-848f-6dc1c022159b.pdf";
+  $answer = "per questa tematica dovresti contattare @FoodGame_BOT";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters); 
