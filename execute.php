@@ -72,9 +72,9 @@ if ($text == '/materialedidattico') {
 
 if ($text == '/presentazione') {
   header("Content-Type: application/json");
-  $answer = "Scegli il file desiderato.
-  Presentazione FoodGame: /pf
-  Evoluzione componente digitale: /bc";
+  $answer = "Scegli il file desiderato:
+  /pf - Presentazione FoodGame
+  /bc - Evoluzione componente digitale";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
