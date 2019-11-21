@@ -35,16 +35,45 @@ if ($text == '/relazioni') {
   echo json_encode($parameters);
 }
 
+//---- Sezione sessualità ----//
 if ($text == '/sessualita') {
   header("Content-Type: application/json");
   $answer = "Scegli un argomento specifico tra quelli proposti:
-•	/preservativo_rotto - Si è rotto il preservativo?
-•	/no_preservativo - Non ho usato il preservativo
-•	/approfondimento - Vorresti approfondire la tematica?";
+  /preservativo_rotto - Si è rotto il preservativo?
+  /no_preservativo - Non ho usato il preservativo
+  /approfondimento - Vorresti approfondire la tematica?";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+if ($text == '/preservativo_rotto') {
+  header("Content-Type: application/json");
+  $answer = "Sei interessato ad avere informazioni sulla contraccezione d’emergenza o sulle infezioni sessualmente trasmesse?
+  /gravidanza_indesiderata
+  /ist – infezioni sessualmente trasmesse";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/preservativo_rotto') {
+  header("Content-Type: application/json");
+  $answer = "Si è rotto o non hai usato il preservativo?
+Dato che volevi usare il preservativo o sei preoccupato/a di non averlo usato vuol dire che non è tua intenzione affrontare una gravidanza. A questo punto è opportuno ricorrere alla contraccezione d’emergenza. Sei maggiorenne o minorenne?
+/Maggiorenne
+/Minorenne
+
+Vuoi informazioni sulla contraccezione per non correre il rischio di una gravidanza indesiderata quando avrai altri rapporti sessuali con il tuo partner? 
+/contraccezione – si mi interessa";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+
+//---- fine sezione sessualità ----//
 
 
 
