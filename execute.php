@@ -37,11 +37,16 @@ if ($text == '/relazioni') {
 
 if ($text == '/sessualita') {
   header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sulla sessualità... ma non sono ancora pronto! :)";
+  $answer = "Scegli un argomento specifico tra quelli proposti:
+•	/preservativo_rotto - Si è rotto il preservativo?
+•	/no_preservativo - Non ho usato il preservativo
+•	/approfondimento - Vorresti approfondire la tematica?";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+
 
 if ($text == '/sostanze') {
   header("Content-Type: application/json");
