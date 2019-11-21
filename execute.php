@@ -111,6 +111,32 @@ http://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italia
   echo json_encode($parameters);
 }
 
+if ($text == '/no_preservativo') {
+  header("Content-Type: application/json");
+  $answer = "Scegli un comando:
+  /gravidanza_indesiderata - Se non hai usato il preservativo e sei preoccupato/a per una gravidanza indesiderata?
+  /ist – Hai paura di un’infezione sessualmente trasmissibile?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/ist') {
+  header("Content-Type: application/json");
+  $answer = "Vuoi saperne di più sulle infezioni sessualmente trasmissibili?
+http://www.netyx.it/sesso/malattie-a-trasmissione-sessuale-2/
+
+Sei preoccupato e vuoi eseguire un test?
+https://www.ats-milano.it/portale/Ats/Carta-dei-Servizi/Guida-ai-servizi/HIV-AIDS-Malattie-A-Trasmissione-Sessuale
+http://www.smartsex.eu/
+
+Per rimanere sempre aggiornato/a scarica l’app:
+Android:  https://play.google.com/store/apps/details?id=com.softplace.smartaids
+iOS: https://apps.apple.com/it/app/smart-sex/id878193172";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
 
 //---- fine sezione sessualità ----//
 
@@ -133,13 +159,7 @@ if ($text == '/contraccezione') {
 }
 
 
-if ($text == '/ist') {
-  header("Content-Type: application/json");
-  $answer = "Qua parliamo di infezioni sessualmente trasmissibili. E per ora non ne so abbastanza...";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
+
 
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
