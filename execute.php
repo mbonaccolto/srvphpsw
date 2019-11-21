@@ -57,7 +57,7 @@ if ($text == '/preservativo_rotto') {
   echo json_encode($parameters);
 }
 
-if ($text == '/preservativo_rotto') {
+if ($text == '/gravidanza_indesiderata') {
   header("Content-Type: application/json");
   $answer = "Si è rotto o non hai usato il preservativo?
 Dato che volevi usare il preservativo o sei preoccupato/a di non averlo usato vuol dire che non è tua intenzione affrontare una gravidanza. A questo punto è opportuno ricorrere alla contraccezione d’emergenza. Sei maggiorenne o minorenne?
@@ -71,6 +71,45 @@ Vuoi informazioni sulla contraccezione per non correre il rischio di una gravida
   echo json_encode($parameters);
 }
 
+if ($text == '/maggiorenne') {
+  header("Content-Type: application/json");
+  $answer = "In questo caso puoi andare direttamente in farmacia e acquistare la pillola del giorno dopo.
+Puoi anche rivolgerti al consultorio della tua zona. 
+/consultori - Vuoi vedere un elenco dei consultori? 
+/cpc - Vuoi ulteriori informazioni sulla contraccezione d’emergenza?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/minorenne') {
+  header("Content-Type: application/json");
+  $answer = "In questo caso puoi rivolgerti al consultorio o al tuo medico di famiglia per farti prescrivere la pillola del giorno dopo. Ti invitiamo inoltre a rivolgerti al consultorio della tua zona per adottare un programma contraccettivo più sicuro. 
+/consultori - Vuoi vedere un elenco dei consultori? 
+/cpc - Vuoi ulteriori informazioni sulla contraccezione d’emergenza?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/consultori') {
+  header("Content-Type: application/json");
+  $answer = "Scarica il file:
+  https://www.regione.lombardia.it/wps/wcm/connect/f5e7b712-254f-4095-a30d-d895fa020b74/CF+PER+SITO+3_06_19.xlsx";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/cpc') {
+  header("Content-Type: application/json");
+  $answer = "Contraccezione d’emergenza. Apri i seguenti link:
+http://www.netyx.it/sesso/contraccettivi/cpc-o-pillola-del-giorno-dopo/
+http://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italiano&id=956&area=Salute%20donna&menu=societa";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
 
 
 //---- fine sezione sessualità ----//
