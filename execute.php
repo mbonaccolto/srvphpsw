@@ -138,6 +138,16 @@ iOS: https://apps.apple.com/it/app/smart-sex/id878193172";
   echo json_encode($parameters);
 }
 
+if ($text == '/contraccezione') {
+  header("Content-Type: application/json");
+  $answer = "Ecco un link con le principali modalità di contraccezione che potrai valutare insieme al tuo ginecologo
+  http://www.netyx.it/sesso/contraccettivi/";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
 //---- fine sezione sessualità ----//
 
 
