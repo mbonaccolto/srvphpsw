@@ -27,14 +27,6 @@ if ($text == '/bullismo') {
   echo json_encode($parameters);
 }
 
-if ($text == '/relazioni') {
-  header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sulle relazioni... Anche qua Maurizio mi ha programmato con una risposta inutile. Mi spiace...";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
-
 //---- Sezione sessualità ----//
 if ($text == '/sessualita') { //01
   header("Content-Type: application/json");
