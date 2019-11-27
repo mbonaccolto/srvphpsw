@@ -147,6 +147,80 @@ if ($text == '/contraccezione') {
   echo json_encode($parameters);
 }
 
+if ($text == '/approfondimento') {
+  header("Content-Type: application/json");
+  $answer = "Quale di questa tematica vorresti approfondire?
+  /definizione - Ti interessa sapere cos’è la sessualità?
+  /relazioni – Hai una relazione o ne vorresti una e ti interessa approfondire il tema?
+  /corpo – Come funzionano i miei organi sessuali? Perché il mio corpo è cambiato? Come faccio se non mi piace?
+  /identitàdigenere – cos’è l’identità di genere?
+  /piacere – Considerando che la sessualità è un piacere, vuoi approfondire l’argomento?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/definizione') {
+  header("Content-Type: application/json");
+  $answer = "Puoi trovare una difinizione a questo link:
+  http://www.netyx.it/sesso/sessualita/
+  Oppure scarica questo file:
+  https://socialmi.ats-milano.it/165/social/wiki/heXhZa47tqBmF9_21112019_DEFINIZIONE.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/relazioni') {
+  header("Content-Type: application/json");
+  $answer = "/partner - Ti senti spaesato in questo oceano chiamato “relazioni con un partner” e vorresti qualche consiglio da un esperto?
+  /orientamento – Vuoi sapere qualcosa in più sull’orientamento sessuale?
+  /starbenesoli - Stai bene anche se non hai una relazione e ti domandi il perché?
+  /amarebene – Cosa significa amare bene? Come riconoscere un amore violento?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/relazioni') {
+  header("Content-Type: application/json");
+  $answer = "/partner - Ti senti spaesato in questo oceano chiamato “relazioni con un partner” e vorresti qualche consiglio da un esperto?
+  /orientamento – Vuoi sapere qualcosa in più sull’orientamento sessuale?
+  /starbenesoli - Stai bene anche se non hai una relazione e ti domandi il perché?
+  /amarebene – Cosa significa amare bene? Come riconoscere un amore violento?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/partner') {
+  header("Content-Type: application/json");
+  $answer = "Prova a cliccare questo link:
+  http://www.netyx.it/relazioni/sto-con-te-2/";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/orientamento') {
+  header("Content-Type: application/json");
+  $answer = "Prova a scaricare questo file:
+  https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/starbenesoli') {
+  header("Content-Type: application/json");
+  $answer = "Non preoccuparti, molto probabilmente hai imparato ad essere indipendente e hai capito che la relazione con il partner è qualcosa di bello, ma che non è obbligatorio.
+  Se però provi fastidio quando ti relazioni con gli altri, o preferisci stare sempre da solo, prova a parlarne con qualcuno.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
 //---- fine sezione sessualità ----//
 
