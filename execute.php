@@ -51,8 +51,11 @@ if ($text == '/listacomandi') {
   
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
-  $answer = "FoodGame ATS Milano Città Metropolitana:
-  https://www.youtube.com/watch?v=sB_e7odulS0";
+  $answer = "FoodGame ATS Milano Città Metropolitana: guarda i video fatti dai foodgamer!
+  /exfoodgamer - Intervista ad un ex foodgamer dell'Ist. Torricelli di Milano
+  /cucinare_salutare - video fatto all'ITIS - Liceo Mattei di S. Donato M.se
+  /justdance - video fatto all'ITIS - Liceo Mattei di S. Donato M.se
+  /presentazione - presentazione squadra, ITIS - Liceo Mattei di S. Donato M.se";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -164,6 +167,43 @@ if ($text == '/report') {
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+// video youtube
+
+if ($text == '/exfoodgamer') {
+  header("Content-Type: application/json");
+  $answer = "https://youtu.be/KDAGmy2VUlU";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/cucinare_salutare') {
+  header("Content-Type: application/json");
+  $answer = "https://youtu.be/aYRMwoSmWJA";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/justdance') {
+  header("Content-Type: application/json");
+  $answer = "https://youtu.be/CI9tXsZKa_U";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/presentazione') {
+  header("Content-Type: application/json");
+  $answer = "https://youtu.be/Loxx3gzFtik";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
 // fine comandi
 header("Content-Type: application/json");
