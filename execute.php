@@ -114,7 +114,7 @@ http://www.salute.gov.it/portale/donna/dettaglioContenutiDonna.jsp?lingua=italia
 if ($text == '/no_preservativo') {
   header("Content-Type: application/json");
   $answer = "Scegli un comando:
-  /gravidanza_indesiderata - se hai usato il preservativo e sei preoccupato/a per una gravidanza indesiderata
+  /gravidanza_indesiderata - se non hai usato il preservativo e sei preoccupato/a per una gravidanza indesiderata
   /ist – se hai paura di un’infezione sessualmente trasmissibile";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
