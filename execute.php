@@ -52,10 +52,11 @@ if ($text == '/listacomandi') {
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
   $answer = "FoodGame ATS Milano Città Metropolitana: guarda i video fatti dai foodgamer!
+  /kungfoodpanda - Video di una squadra - Ist. Pareto di Milano
   /exfoodgamer - Intervista ad un ex foodgamer dell'Ist. Torricelli di Milano
-  /cucinare_salutare - video fatto all'ITIS - Liceo Mattei di S. Donato M.se
-  /justdance - video fatto all'ITIS - Liceo Mattei di S. Donato M.se
-  /colorfuls - presentazione squadra, ITIS - Liceo Mattei di S. Donato M.se";
+  /cucinare_salutare - video fatto all'ITIS - Liceo Mattei di S. Donato Milanese
+  /justdance - video fatto all'ITIS - Liceo Mattei di S. Donato Milanese
+  /colorfuls - presentazione squadra, ITIS - Liceo Mattei di S. Donato Milanese";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -204,6 +205,15 @@ if ($text == '/colorfuls') {
   echo json_encode($parameters);
 }
 
+if ($text == '/kungfoodpanda') {
+  header("Content-Type: application/json");
+  $answer = "https://youtu.be/mvVW6LW4SEQ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+// fine video
 
 // fine comandi
 header("Content-Type: application/json");
