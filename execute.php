@@ -192,7 +192,6 @@ if ($text == '/orientamento') { //15
   echo json_encode($parameters);
 }
 
-
 if ($text == '/starbenesoli') { //16
   header("Content-Type: application/json");
   $answer = "Non preoccuparti, molto probabilmente hai imparato ad essere indipendente e hai capito che la relazione con il partner è qualcosa di bello, ma che non è obbligatorio.
