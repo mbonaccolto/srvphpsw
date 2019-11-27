@@ -55,7 +55,7 @@ if ($text == '/foodgame') {
   /exfoodgamer - Intervista ad un ex foodgamer dell'Ist. Torricelli di Milano
   /cucinare_salutare - video fatto all'ITIS - Liceo Mattei di S. Donato M.se
   /justdance - video fatto all'ITIS - Liceo Mattei di S. Donato M.se
-  /presentazione - presentazione squadra, ITIS - Liceo Mattei di S. Donato M.se";
+  /colorfuls - presentazione squadra, ITIS - Liceo Mattei di S. Donato M.se";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -196,7 +196,7 @@ if ($text == '/justdance') {
 }
 
 
-if ($text == '/presentazione') {
+if ($text == '/colorfuls') {
   header("Content-Type: application/json");
   $answer = "https://youtu.be/Loxx3gzFtik";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
