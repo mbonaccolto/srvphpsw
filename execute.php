@@ -35,7 +35,7 @@ if ($text == '/start') {
   echo json_encode($parameters);
 }
 
-if ($text == '/listacomandi') {
+if ($text == '/listacomandi') { //01
   header("Content-Type: application/json");
   $answer = "/foodgame - Intro sul gioco
   /presentazione - presentazione gioco
@@ -49,7 +49,7 @@ if ($text == '/listacomandi') {
   echo json_encode($parameters);
 }
   
-if ($text == '/foodgame') {
+if ($text == '/foodgame') { //02
   header("Content-Type: application/json");
   $answer = "FoodGame ATS Milano Città Metropolitana: guarda i video fatti dai foodgamer!
   /kungfoodpanda - Video di una squadra - Ist. Pareto di Milano
@@ -62,7 +62,7 @@ if ($text == '/foodgame') {
   echo json_encode($parameters);
 }
 
-if ($text == '/materialedidattico') {
+if ($text == '/materialedidattico') { //03
   header("Content-Type: application/json");
   $answer = "Clicca su un comando per scaricare il materiale didattico desiderato:
   /alimentazione_sostenibile
@@ -74,7 +74,7 @@ if ($text == '/materialedidattico') {
   echo json_encode($parameters);
 }
 
-if ($text == '/presentazione') {
+if ($text == '/presentazione') { //04
   header("Content-Type: application/json");
   $answer = "Scegli il file desiderato:
   /pf - Presentazione FoodGame
@@ -84,7 +84,7 @@ if ($text == '/presentazione') {
   echo json_encode($parameters);
 }
 
-if ($text == '/pf') {
+if ($text == '/pf') { //05
   header("Content-Type: application/json");
   $answer = "Presentazione FoodGame:
   https://socialmi.ats-milano.it/165/social/wiki/UcSmMJHujJRA4h_11112019_PAOLAFISCHERpresentazionefoodgame.pdf";
@@ -93,7 +93,7 @@ if ($text == '/pf') {
   echo json_encode($parameters);
 }
 
-if ($text == '/bc') {
+if ($text == '/bc') { //06
   header("Content-Type: application/json");
   $answer = "Evoluzione componente digitale: 
   https://socialmi.ats-milano.it/165/social/wiki/Ucfy6YBOYzz58O_11112019_BENEDETTACHIAVEGATTIEvoluzionedellacomponentedigitale.pdf";
@@ -104,7 +104,7 @@ if ($text == '/bc') {
 
 // sottocomandi /materialedidattico
 
-if ($text == '/alimentazione_sostenibile') {
+if ($text == '/alimentazione_sostenibile') { //07
   header("Content-Type: application/json");
   $answer = "Alimentazione sostenibile:
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Alimentazione%20sostenibile_67dc0fa3-8911-43d3-8030-198eb56fef48.pdf";
@@ -113,7 +113,7 @@ if ($text == '/alimentazione_sostenibile') {
   echo json_encode($parameters);
 }
 
-if ($text == '/scegliere_a_tavola') {
+if ($text == '/scegliere_a_tavola') { //08
   header("Content-Type: application/json");
   $answer = "FoodGame: impariamo a scegliere anche a tavola...
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/2018%20impariamo%20a%20scegliere...%20anche%20a%20tavola!-1_1ffa7046-61b8-442f-848f-6dc1c022159b.pdf";
@@ -122,7 +122,7 @@ if ($text == '/scegliere_a_tavola') {
   echo json_encode($parameters);
 }
 
-if ($text == '/attivita_fisica') {
+if ($text == '/attivita_fisica') { //09
   header("Content-Type: application/json");
   $answer = "L'importanza dell'attività fisica:
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/All%20Attivita%20fisica%20dico%20SI_a96a5ba0-416c-46b9-90b2-24e4d4cb0b37.pdf";
@@ -131,7 +131,7 @@ if ($text == '/attivita_fisica') {
   echo json_encode($parameters);
 }
 
-if ($text == '/carta_di_milano') {
+if ($text == '/carta_di_milano') { //10
   header("Content-Type: application/json");
   $answer = "La Carta di Milano (non è una mappa!):
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/Carta%20di%20MIlano_696adf84-ff83-4400-a324-1c3124d5674a.pdf";
@@ -142,7 +142,7 @@ if ($text == '/carta_di_milano') {
 
 // fine sottocomando /materialedidattico
 
-if ($text == '/tappa_1') {
+if ($text == '/tappa_1') { //11
   header("Content-Type: application/json");
   $answer = "Completa la 1° tappa, fai il test di squadra!
   https://www.ats-milano.it/Portale/Portals/0/AtsMilano_Documenti/tappa%201TEST%20SQUADRA_a8160673-1c46-4a08-a07c-441d727b1d9b.doc";
