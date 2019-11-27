@@ -221,6 +221,45 @@ if ($text == '/starbenesoli') {
   echo json_encode($parameters);
 }
 
+if ($text == '/amarebene') {
+  header("Content-Type: application/json");
+  $answer = "Prova a dare un'occhiata a questi link:
+  http://www.netyx.it/questo-e-amore/
+	http://www.netyx.it/lamore-e-rispetto/";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/corpo') {
+  header("Content-Type: application/json");
+  $answer = "/nonmipiaccio - Non ti senti a tuo agio col tuo corpo e non ti piaci?
+  /cambiamento - Il tuo corpo è cambiato negli ultimi anni? Vuoi capirci di più?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/nonmipiaccio') {
+  header("Content-Type: application/json");
+  $answer = "Guarda questo link:
+  http://www.netyx.it/mi-piaccio-io-e-il-mio-corpo/quando-non-mi-piaccio/
+  Potrebbe piacerti anche questo:
+  https://socialmi.ats-milano.it/165/social/wiki/p49tj14Cv6yueA_21112019_poesiacarloporta.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/cambiamento') {
+  header("Content-Type: application/json");
+  $answer = "/ragazza - se sei una ragazza
+  /ragazzo - se sei un ragazzo";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
 //---- fine sezione sessualità ----//
 
