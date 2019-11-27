@@ -329,7 +329,7 @@ if ($text == '/comedarepiacere') { //29
   header("Content-Type: application/json");
   $answer = "Probabilmente sei curioso di sapere come procurare piacere al tuo o alla tua partner o come procurartelo da solo/a. Posso aiutarti! Devi solo dirmi se vuoi saperne di più sul piacere maschile o sul piacere femminile:
   /piaceremaschile
-  /piacere femminile";
+  /piacerefemminile";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
