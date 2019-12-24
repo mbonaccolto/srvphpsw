@@ -19,14 +19,6 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
-if ($text == '/bullismo') {
-  header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sul bullismo... Per adesso Maurizio mi ha programmato con questa frase inutile :(";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
-}
-
 //---- Sezione sessualità ----//
 if ($text == '/sessualita') { //01
   header("Content-Type: application/json");
@@ -511,7 +503,7 @@ https://socialmi.ats-milano.it/165/social/wiki/wH4QEQcbqOm0EI_06122019_RISCHIKET
   echo json_encode($parameters);
 }
 
-if ($text == '/LSD') { //56
+if ($text == '/lsd') { //56
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
 https://socialmi.ats-milano.it/165/social/wiki/4mv5h9yGjAxqWF_06122019_RISCHILSD.pdf";
@@ -585,6 +577,65 @@ https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidi
   echo json_encode($parameters);
 }
 
+
+
+//---- Sezione bullismo/cyberbullismo ----//
+
+if ($text == '/bullismo') {
+  header("Content-Type: application/json");
+  $answer = "Dovrei dare delle info sul bullismo... Per adesso Maurizio mi ha programmato con questa frase inutile :(";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+/*
+if ($text == '/bullismo') { //80
+  header("Content-Type: application/json");
+  $answer = "Ciao, visto che spesso i concetti di bullismo e cyberbullismo sono simili o usati come sinonimi, ti chiedo se si tratta di bullismo o cyberbullismo? 
+  I due problemi, infatti, richiedono risposte e aiuti differenti:
+/bullismo_info
+/cyberbullismo_info
+/intensita_BC: il Bullismo o Cyberbullismo hanno diverse intensità. Impariamo a conoscerle
+/aiuto_CB: a chi chiedere aiuto in caso di bullismo o cyberbullismo";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/cyberbullismo') { //80
+  header("Content-Type: application/json");
+  $answer = "Ciao, visto che spesso i concetti di bullismo e cyberbullismo sono simili o usati come sinonimi, ti chiedo se si tratta di bullismo o cyberbullismo? 
+  I due problemi, infatti, richiedono risposte e aiuti differenti:
+/bullismo_info
+/cyberbullismo_info
+/intensita_BC: il Bullismo o Cyberbullismo hanno diverse intensità. Impariamo a conoscerle
+/aiuto_CB: a chi chiedere aiuto in caso di bullismo o cyberbullismo";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/bullismo_info') { //81
+  header("Content-Type: application/json");
+  $answer = "Ciao, cos’è successo in particolare?
+/ho_assistito – ho assistito ad un atto di bullismo
+/ho_subito – ho subito un atto di bullismo
+/bullismo_info – informazioni sul bullismo";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/bullismo_info') { //82
+  header("Content-Type: application/json");
+  $answer = "Non ti preoccupare, il bullismo è un fenomeno diffuso che riguarda oltre il 10% della popolazione studentesca. Questo non toglie il fatto che tu debba comunque essere aiutato.
+Troverai delle informazioni utili a questo link: - link mancante, coming soon!";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+*/
 
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
