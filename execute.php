@@ -346,23 +346,245 @@ if ($text == '/piacerefemminile') { //31
 
 //---- fine sezione sessualità ----//
 
+//---- inizio sezione dipendenze ----//
 
-
-if ($text == '/sostanze') {
+if ($text == '/sostanze') { //40
   header("Content-Type: application/json");
-  $answer = "Ci sono un sacco di leggi contro l'abuso di sostanze :)";
+  $answer = "Ciao, se hai cliccato qui, vuol dire che sei interessato ad approfondire questo tema. 
+Vuoi dirmi cosa ti interessa di più?
+/approfondimento_sostanze – Se vuoi saperne di più
+/rischi – per conoscere i rischi legati alle sostanze, le leggi e leggere delle testimonianze
+/sostanze_aiuto – ho bisogno di aiuto";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
 
-if ($text == '/contraccezione') {
+if ($text == '/approfondimento_sostanze') { //41
   header("Content-Type: application/json");
-  $answer = "Attenti alle malattie /ist e alle gravidanze indesiderate!";
+  $answer = "Scegli tra queste opzioni: 
+/definizione_sostanze – se ti interessa la definizione di sostanze psicoattive
+/usoabuso – uso, abuso o ne dipendo? 
+/qualisono – se vuoi conoscere quali sono le sostanze";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+if ($text == '/definizione_sostanze') { //42
+  header("Content-Type: application/json");
+  $answer = "Scarica questo file se vuoi conoscere la definizione di sostanze psicoattive:
+https://socialmi.ats-milano.it/165/social/wiki/MYhriSoTZvZQ5q_06122019_definizionesostanzepsicoattive.pdf
+E se ti va, guarda questo video:
+https://socialmi.ats-milano.it/165/social/wiki/xW4SrbgPX3eAXc_29102019_Nuggets.mp4";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/usoabuso') { //43
+  header("Content-Type: application/json");
+  $answer = "Scarica questo file se vuoi sapere se stai solo usando, stai abusando o sei dipendente da una sostanza:
+https://socialmi.ats-milano.it/165/social/wiki/3K03VzW32fhfdw_06122019_usoabusodipendenzatolleranzaastinenzaoverdose.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/qualisono') { //44
+  header("Content-Type: application/json");
+  $answer = "Ecco per te una lista e una descrizione delle sostanze psicoattive:
+https://socialmi.ats-milano.it/165/social/wiki/WcQlsBlRGXee33_06122019_cerchiosostanzepsicoattive.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/rischi') { //45
+  header("Content-Type: application/json");
+  $answer = "Vuoi approfondire le sostanze legali o illegali?
+/sostanze_legali – come ad esempio il tabacco, alcol, ecc.
+/sostanze_illegali – cannabis, metamfetamine, cocaina, ecc.
+/leggi – vuoi sapere quali sono le ricadute legali dell’uso di sostanze
+/testimonianze – vuoi leggere la testimonianza di chi ha fatto uso di droghe illegali?";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sostanze_legali') { //46
+  header("Content-Type: application/json");
+  $answer = "Su quale sostanza vuoi ulteriori informazioni?
+/alcol – scarica file informativo sull’alcol
+/tabacco – scarica file informativo sul tabacco
+/sigaretta_elettronica – scarica file informativo sulla sigaretta elettronica";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/alcol') { //47
+  header("Content-Type: application/json");
+  $answer = "Potrebbero interessarti questi file: 
+https://socialmi.ats-milano.it/165/social/wiki/02z36t3mEFYy5S_06122019_alcolapprofondimento.pdf
+https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/tabacco') { //48
+  header("Content-Type: application/json");
+  $answer = "Potrebbero interessarti questi file: 
+https://socialmi.ats-milano.it/165/social/wiki/MQEP1Ids56Gwf3_06122019_Fumoditabaccoapprofondimento.pdf
+https://socialmi.ats-milano.it/165/social/wiki/KcLKnSShulQ3XV_06122019_RISCHITABACCO.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sigaretta_elettronica') { //49
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file: 
+https://socialmi.ats-milano.it/165/social/wiki/znmQ2icBesT09l_06122019_Sigarettaelettronicaapprofondimento.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sostanze_illegali') { //50
+  header("Content-Type: application/json");
+  $answer = "Su quale sostanza vuoi ulteriori informazioni?
+/cannabis – marjuana e hashish
+/cocaina – sostanza ad alta dipendenza
+/metamfetamine – ecstasy, MDMA, ecc.
+/eroina – sostanza sedativa ad alta dipendenza
+/ketamina 
+/LSD";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/cannabis') { //51
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/cocaina') { //52
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/rRHDBXCQq0B4gs_06122019_RISCHICOCAINA.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/metamfetamine') { //53
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/lSMkIIjpbPG8M4_06122019_RISCHIECSTASY.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/eroina') { //54
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/w4xQXeL6noWHLF_06122019_RISCHIEROINA.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/ketamina') { //55
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/wH4QEQcbqOm0EI_06122019_RISCHIKETAMINA.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/LSD') { //56
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/4mv5h9yGjAxqWF_06122019_RISCHILSD.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/leggi') { //57
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/Y2Q9siveTxwHAl_06122019_normativa.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/testimonianze') { //58
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/CEktIcM8h7xmbe_06122019_testimonianzesostanze.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sostanze_aiuto') { //59
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidipendenze.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/gioco_azzardo') { //60
+  header("Content-Type: application/json");
+  $answer = "Seleziona una tra queste opzioni: 
+/approfondimento_ga - se ti interessa conoscere qualcosa in più sul tema del gioco d’azzardo
+/testimonianza_ga – se vorresti leggere una testimonianza di chi gioca d’azzardo
+/aiuto_ga – se hai bisogno di aiuto";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/approfondimento_ga') { //61
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/mzjLLIOrqtesTb_06122019_giocodazzardoapprofondimento.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/testimonianza_ga') { //62
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/sX7tWdDeYhq79a_06122019_testimonianzagiocoazzardo.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/aiuto_ga') { //63
+  header("Content-Type: application/json");
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidipendenze.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
