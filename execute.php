@@ -461,7 +461,8 @@ if ($text == '/sostanze_illegali') { //50
 
 if ($text == '/cannabis') { //51
   header("Content-Type: application/json");
-  $answer = "Potrebbe interessarti questo file:";
+  $answer = "Potrebbe interessarti questo file:
+https://socialmi.ats-milano.it/165/social/wiki/x8sD4f3wDWVZDh_06122019_RISCHICANNABIS.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
