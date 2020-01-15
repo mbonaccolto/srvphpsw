@@ -340,7 +340,7 @@ if ($text == '/piacerefemminile') { //31
 
 //---- inizio sezione dipendenze ----//
 
-if ($text == '/sostanze') { //40
+if ($text == '/dipendenze') { //40 ex /sostanze
   header("Content-Type: application/json");
   $answer = "Ciao, se hai cliccato qui, vuol dire che sei interessato ad approfondire questo tema. 
 Vuoi dirmi cosa ti interessa di più?
