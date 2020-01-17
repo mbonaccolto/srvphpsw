@@ -79,7 +79,7 @@ if ($text == '/minorenne') { //05
 if ($text == '/consultori') { //06
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-  https://www.regione.lombardia.it/wps/wcm/connect/f5e7b712-254f-4095-a30d-d895fa020b74/CF+PER+SITO+3_06_19.xlsx";
+  https://socialmi.ats-milano.it/165/social/wiki/454xVG9UI6QXwh_17012020_elencoconsultori30619.xlsx";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
