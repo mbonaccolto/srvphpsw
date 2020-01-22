@@ -420,9 +420,13 @@ if ($text == '/alcol') { //47
   header("Content-Type: application/json");
   $answer = "Potrebbero interessarti questi file: 
 https://socialmi.ats-milano.it/165/social/wiki/02z36t3mEFYy5S_06122019_alcolapprofondimento.pdf
-https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf
+https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
 
-E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull’alcool: 
+header("Content-Type: application/json");
+ $answer = "E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull’alcool: 
 https://socialmi.ats-milano.it/165/social/wiki/eOiyrKw182icnx_20012020_TUTTOQUELLOCHEDEVISAPERESULLALCOL.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
