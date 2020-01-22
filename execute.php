@@ -426,11 +426,11 @@ https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALC
   echo json_encode($parameters);
 
 header("Content-Type: application/json");
- $answer = "E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull’alcool: 
+ $answer1 = "E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull’alcool: 
 https://socialmi.ats-milano.it/165/social/wiki/eOiyrKw182icnx_20012020_TUTTOQUELLOCHEDEVISAPERESULLALCOL.mp4";
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
-  $parameters["method"] = "sendMessage";
-  echo json_encode($parameters);
+  $parameters1 = array('chat_id' => $chatId, "text" => $answer1);
+  $parameters1["method"] = "sendMessage";
+  echo json_encode($parameters1);
 }
 
 if ($text == '/tabacco') { //48
