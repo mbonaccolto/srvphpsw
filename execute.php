@@ -420,7 +420,10 @@ if ($text == '/alcol') { //47
   header("Content-Type: application/json");
   $answer = "Potrebbero interessarti questi file: 
 https://socialmi.ats-milano.it/165/social/wiki/02z36t3mEFYy5S_06122019_alcolapprofondimento.pdf
-https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf";
+https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf
+
+E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull’alcool: 
+https://socialmi.ats-milano.it/165/social/wiki/eOiyrKw182icnx_20012020_TUTTOQUELLOCHEDEVISAPERESULLALCOL.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -430,7 +433,11 @@ if ($text == '/tabacco') { //48
   header("Content-Type: application/json");
   $answer = "Potrebbero interessarti questi file: 
 https://socialmi.ats-milano.it/165/social/wiki/MQEP1Ids56Gwf3_06122019_Fumoditabaccoapprofondimento.pdf
-https://socialmi.ats-milano.it/165/social/wiki/KcLKnSShulQ3XV_06122019_RISCHITABACCO.pdf";
+https://socialmi.ats-milano.it/165/social/wiki/KcLKnSShulQ3XV_06122019_RISCHITABACCO.pdf
+
+Se ti va, guarda anche questo video sul “perché non riesci a smettere di fumare”: 
+https://socialmi.ats-milano.it/165/social/wiki/xcuiVvCK6ifJOe_20012020_PERCHNONRIESCIASMETTEREDIFUMARE.mp4
+";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
