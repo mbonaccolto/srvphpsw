@@ -589,7 +589,7 @@ https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidi
 
 //---- Sezione bullismo/cyberbullismo ----//
 
-if ($text == '/bullismo') { //80
+if (($text == '/bullismo') || ($text == '/cyberbullismo')) { //80
   header("Content-Type: application/json");
   $answer = "Ciao, ti chiedo di selezionare tra queste opzioni: 
 /approfondimento_bullismo - approfondimento
@@ -662,55 +662,66 @@ https://socialmi.ats-milano.it/165/social/wiki/zueZXK5tAKe3GM_20012020_hoassisti
   echo json_encode($parameters);
 }
 
-
-
-/*
-if ($text == '/bullismo') { //80
+if ($text == '/aiuto') { //87
   header("Content-Type: application/json");
-  $answer = "Ciao, visto che spesso i concetti di bullismo e cyberbullismo sono simili o usati come sinonimi, ti chiedo se si tratta di bullismo o cyberbullismo? 
-  I due problemi, infatti, richiedono risposte e aiuti differenti:
-/bullismo_info
-/cyberbullismo_info
-/intensita_BC: il Bullismo o Cyberbullismo hanno diverse intensità. Impariamo a conoscerle
-/aiuto_CB: a chi chiedere aiuto in caso di bullismo o cyberbullismo";
+  $answer = "Puoi iniziare a parlarne con un adulto di tua fiducia o puoi rivolgerti a uno psicologo che potrai trovare a scuola oppure in un servizio pubblico. In questi servizi, come i consultori familiari e i centri dell’infanzia e dell’adolescenza, troverai un aiuto specializzato nel rispetto della tua privacy. 
+Scarica il materiale informativo per visualizzare i contatti:
+- elenco dei consultori: 
+https://socialmi.ats-milano.it/165/social/wiki/07WMVsTuPFJs5i_16012020_consultori.pdf
+
+- modulo per il cyberbullismo: 
+https://socialmi.ats-milano.it/165/social/wiki/sHXK5VTZ8l9KkQ_15012020_I9rCzEJy3plg5e24012018Modelloperlasegnalazionereclamoinmateriadicyberbullismo.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
 
-if ($text == '/cyberbullismo') { //80
+if ($text == '/legge') { //88
   header("Content-Type: application/json");
-  $answer = "Ciao, visto che spesso i concetti di bullismo e cyberbullismo sono simili o usati come sinonimi, ti chiedo se si tratta di bullismo o cyberbullismo? 
-  I due problemi, infatti, richiedono risposte e aiuti differenti:
-/bullismo_info
-/cyberbullismo_info
-/intensita_BC: il Bullismo o Cyberbullismo hanno diverse intensità. Impariamo a conoscerle
-/aiuto_CB: a chi chiedere aiuto in caso di bullismo o cyberbullismo";
+  $answer = "Ricordati che c’è una legge specifica che contrasta bullismo e cyberbullismo. 
+https://socialmi.ats-milano.it/165/social/wiki/vzRiRuRfXm6VlJ_15012020_LEGGE71.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
 
-if ($text == '/bullismo_info') { //81
+if ($text == '/intensita') { //89
   header("Content-Type: application/json");
-  $answer = "Ciao, cos’è successo in particolare?
-/ho_assistito – ho assistito ad un atto di bullismo
-/ho_subito – ho subito un atto di bullismo
-/bullismo_info – informazioni sul bullismo";
+  $answer = "Il bullismo e il cyberbullismo, quando si verificano, sono sempre delle urgenze. Va valutata l’intensità dell’azione di vessazione per adeguare le azioni da intraprendere. Nello specifico:
+/alta_intensita: Alta intensità
+/media_intensita: Media intensità
+/bassa_intensita: Bassa intensità";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
 
-if ($text == '/bullismo_info') { //82
+if ($text == '/alta_intensita') { //90
   header("Content-Type: application/json");
-  $answer = "Non ti preoccupare, il bullismo è un fenomeno diffuso che riguarda oltre il 10% della popolazione studentesca. Questo non toglie il fatto che tu debba comunque essere aiutato.
-Troverai delle informazioni utili a questo link: - link mancante, coming soon!";
+  $answer = "Si tratta di azione che hanno una grave ripercussione fisica e/o psicologica. Azioni ripetute di bullismo e cyberbullismo in fase acuta: sexting, cyberstalking, furto di identità. Prevede l’intervento delle forze dell’ordine e/o denuncia/querela.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
-*/
+
+if ($text == '/media_intensita') { //91
+  header("Content-Type: application/json");
+  $answer = "Si tratta di azioni che hanno una spiacevole ripercussione fisica e/o psicologica. Azioni ripetute di bullismo e cyberbullismo in fase iniziale. Prevede l’attivazione delle forze dell’ordine per gli episodi di cyberbullismo.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/bassa_intensita') { //92
+  header("Content-Type: application/json");
+  $answer = "Si tratta di azioni che hanno linguaggio offensivo, litigi online, esclusioni da chat, molestie, scherzi spiacevoli, lievi prepotenze, discriminazioni, uso improprio dei dispositivi durante le ore di lezione. Non prevede necessariamente l’attivazione delle forze dell’ordine.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+//---- Altro ----//
 
 if ($text == '/foodgame') {
   header("Content-Type: application/json");
