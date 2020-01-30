@@ -589,13 +589,80 @@ https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidi
 
 //---- Sezione bullismo/cyberbullismo ----//
 
-if ($text == '/bullismo') {
+if ($text == '/bullismo') { //80
   header("Content-Type: application/json");
-  $answer = "Dovrei dare delle info sul bullismo... Per adesso Maurizio mi ha programmato con questa frase inutile :(";
+  $answer = "Ciao, ti chiedo di selezionare tra queste opzioni: 
+/approfondimento_bullismo - approfondimento
+/hosubito – se hai subito un episodio di bullismo
+/hoassistito – se hai assistito ad un episodio di bullismo
+/aiuto - a chi chiedere aiuto in caso di bullismo o cyberbullismo
+/legge – cosa dice la legge
+/intensita - intensità dell'azione 
+";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+if ($text == '/approfondimento_bullismo') { //81
+  header("Content-Type: application/json");
+  $answer = "Cosa ti piacerebbe conoscere nel dettaglio?
+/caratteristiche 
+/tipologie
+/attori – per conoscere chi può essere coinvolto in un episodio di bullismo";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/caratteristiche') { //82
+  header("Content-Type: application/json");
+  $answer = "Scarica il file:
+https://socialmi.ats-milano.it/165/social/wiki/e9PzznmQ2icBes_20012020_caratteristichebullismo.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/tipologie') { //83
+  header("Content-Type: application/json");
+  $answer = "Scarica il file:
+https://socialmi.ats-milano.it/165/social/wiki/T09lS4PKA8j3hO_20012020_tipidibullismo.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/attori') { //84
+  header("Content-Type: application/json");
+  $answer = "Scarica il file:
+https://socialmi.ats-milano.it/165/social/wiki/dpeREPQ0PMODJb_20012020_attori.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/hosubito') { //85
+  header("Content-Type: application/json");
+  $answer = "Non ti preoccupare, il bullismo è un fenomeno diffuso che riguarda oltre il 10% della popolazione studentesca. 
+Questo non toglie il fatto che tu debba comunque essere aiutato.
+Troverai delle informazioni utili a questo link:
+https://socialmi.ats-milano.it/165/social/wiki/6EjBlkDm1kqUpr_20012020_hosubito.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/hosubito') { //86
+  header("Content-Type: application/json");
+  $answer = "Bravo! Se sei qua a parlare con me vuol dire che non stai voltando lo sguardo “dall’altra parte”, e non sei un indifferente. Per agire troverai delle informazioni utili a questo link:
+https://socialmi.ats-milano.it/165/social/wiki/zueZXK5tAKe3GM_20012020_hoassistito.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
 
 /*
 if ($text == '/bullismo') { //80
