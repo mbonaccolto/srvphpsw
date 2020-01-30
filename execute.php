@@ -653,7 +653,7 @@ https://socialmi.ats-milano.it/165/social/wiki/6EjBlkDm1kqUpr_20012020_hosubito.
   echo json_encode($parameters);
 }
 
-if ($text == '/hosubito') { //86
+if ($text == '/hoassistito') { //86
   header("Content-Type: application/json");
   $answer = "Bravo! Se sei qua a parlare con me vuol dire che non stai voltando lo sguardo “dall’altra parte”, e non sei un indifferente. Per agire troverai delle informazioni utili a questo link:
 https://socialmi.ats-milano.it/165/social/wiki/zueZXK5tAKe3GM_20012020_hoassistito.pdf";
