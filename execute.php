@@ -79,7 +79,7 @@ if ($text == '/minorenne') { //05
 if ($text == '/consultori') { //06
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-  https://socialmi.ats-milano.it/165/social/wiki/454xVG9UI6QXwh_17012020_elencoconsultori30619.xlsx";
+  https://socialmi.ats-milano.it/165/social/wiki/07WMVsTuPFJs5i_16012020_consultori.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -178,7 +178,10 @@ if ($text == '/partner') { //14
 if ($text == '/orientamento') { //15
   header("Content-Type: application/json");
   $answer = "Prova a scaricare questo file:
-  https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf";
+https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf
+  
+Se ti va guarda anche questo video: 
+https://socialmi.ats-milano.it/165/social/wiki/IiKey79Uc3gt3U_23012020_videoplayback.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -196,8 +199,11 @@ if ($text == '/starbenesoli') { //16
 if ($text == '/amarebene') { //17
   header("Content-Type: application/json");
   $answer = "Prova a dare un'occhiata a questi link:
-  http://www.netyx.it/questo-e-amore/
-	http://www.netyx.it/lamore-e-rispetto/";
+http://www.netyx.it/questo-e-amore/
+http://www.netyx.it/lamore-e-rispetto/
+Mi raccomando, amare bene significa anche conoscere il significato di violenza. 
+Forse questo video potrebbe aiutarti: 
+https://socialmi.ats-milano.it/165/social/wiki/o8tW1vR30x9nTZ_23012020_videoplayback.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -253,8 +259,14 @@ if ($text == '/ragazzo') { //22
 
 if ($text == '/identitadigenere') { //23
   header("Content-Type: application/json");
-  $answer = "Scarica il file:
-  https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf";
+  $answer = "
+Dai un’occhiata a questo file, ti chiarirà le idee sul significato di identità di genere: 
+https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf
+
+Ti consiglio anche di guardare questi video: 
+https://socialmi.ats-milano.it/165/social/wiki/hJ3HBsHQzH8kZe_23012020_videoplayback.mp4
+https://socialmi.ats-milano.it/165/social/wiki/IiKey79Uc3gt3U_23012020_videoplayback.mp4
+";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -321,7 +333,7 @@ if ($text == '/comedarepiacere') { //29
 if ($text == '/piaceremaschile') { //30
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-  https://socialmi.ats-milano.it/165/social/wiki/C5BCxoXmoYVwis_21112019_comedarepiaceremaschile.pdf";
+https://socialmi.ats-milano.it/165/social/wiki/C5BCxoXmoYVwis_21112019_comedarepiaceremaschile.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -330,7 +342,7 @@ if ($text == '/piaceremaschile') { //30
 if ($text == '/piacerefemminile') { //31
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-  https://socialmi.ats-milano.it/165/social/wiki/ep2vQSije6abBk_21112019_comedarepiacerefemminile.pdf";
+https://socialmi.ats-milano.it/165/social/wiki/ep2vQSije6abBk_21112019_comedarepiacerefemminile.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -422,7 +434,7 @@ if ($text == '/alcol') { //47
 https://socialmi.ats-milano.it/165/social/wiki/02z36t3mEFYy5S_06122019_alcolapprofondimento.pdf
 https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf
 
-E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull’alcool: 
+E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull'alcol: 
 https://socialmi.ats-milano.it/165/social/wiki/eOiyrKw182icnx_20012020_TUTTOQUELLOCHEDEVISAPERESULLALCOL.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
