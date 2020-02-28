@@ -667,7 +667,13 @@ https://socialmi.ats-milano.it/165/social/wiki/6EjBlkDm1kqUpr_20012020_hosubito.
 
 if ($text == '/hoassistito') { //86
   header("Content-Type: application/json");
-  $answer = "Bravo! Se sei qua a parlare con me vuol dire che non stai voltando lo sguardo “dall’altra parte”, e non sei un indifferente. Per agire troverai delle informazioni utili a questo link:
+  $answer = "Bravo! Se sei qua a parlare con me vuol dire che non stai voltando lo sguardo “dall’altra parte”, e non sei un indifferente. 
+Devi sapere che adesso hai a disposizione quattro strategie: 
+- prenderti cura della vittima: /prenditicura
+- adottare comportamenti a favore della vittima: /provittima
+-contrastare il bullo: /contrastobullo
+-chiedere aiuto: /aiuto
+In più, troverai delle informazioni utili a questo link:
 https://socialmi.ats-milano.it/165/social/wiki/zueZXK5tAKe3GM_20012020_hoassistito.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -727,6 +733,40 @@ if ($text == '/media_intensita') { //91
 if ($text == '/bassa_intensita') { //92
   header("Content-Type: application/json");
   $answer = "Si tratta di azioni che hanno linguaggio offensivo, litigi online, esclusioni da chat, molestie, scherzi spiacevoli, lievi prepotenze, discriminazioni, uso improprio dei dispositivi durante le ore di lezione. Non prevede necessariamente l’attivazione delle forze dell’ordine.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/prenditicura') { //93
+  header("Content-Type: application/json");
+  $answer = "•	Fai sentire alla vittima che non è sola e che può contare sul tuo aiuto, dicendole parole di conforto e cercando una soluzione insieme. 
+•	Fai sentire la vittima protetta e al sicuro grazie anche a te. 
+•	Consola la vittima nel modo che più può esserle d’aiuto, dicendole qualcosa di carino, offrendole un dolcetto o ascoltando insieme la sua canzone preferita. 
+•	Fai i complimenti alla vittima per qualcosa che indossa o per un tratto del suo carattere, aiuterà la vittima a non sentirsi sola e abbandonata da tutti.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/provittima') { //94
+  header("Content-Type: application/json");
+  $answer = "•	Fai partecipare la vittima alle attività del tuo gruppo, invitandola al cinema con voi, al tuo compleanno o a cena a casa tua. 
+•	Difendi la vittima, dicendo al bullo di smetterla, cercando di mantenere sempre un tono di voce calmo e fermo. 
+•	Organizza dei giochi con la vittima, facendola sentire accettata.
+•	Fai sentire la vittima parte di un gruppo e accettata dagli altri. Chiedi agli altri compagni di coinvolgerla durante l’intervallo o quando fanno qualcosa durante il pomeriggio.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/contrastobullo') { //95
+  header("Content-Type: application/json");
+  $answer = "•	Se vedi offese sui social e nelle chat, usa il comando “segnala” e chiedi a Facebook o Instagram di rimuovere il contenuto. Potresti chiedere anche ad altri compagni di segnalarlo. Più persone lo fanno, più è probabile che venga rimosso. 
+•	Cancella e interrompi le offese online.
+•	Non ridere, incoraggiare o dare corda ai bulli, anzi chiedi loro di smettere.
+•	Fai smettere le prese in giro, soprattutto se la vittima è sempre la stessa.
+•	Opponiti alle prepotenze quando la vittima non può difendersi.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
