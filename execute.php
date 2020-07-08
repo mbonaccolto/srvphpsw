@@ -31,7 +31,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 17:18";
+    $answer =  "versione 17:30";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -54,8 +54,11 @@ if (($update['message']) != null) {
                                         ['text' =>  'Pulsante 3', 'callback_data' => '3'],
                                         ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
   
-    $parameters["reply_markup"] = json_encode($keyboard, true); // orig
-    
+    # $parameters["reply_markup"] = json_encode($keyboard, true); // orig
+
+    $parameters = json_encode(['force_reply' => true]);
+
+
     
     // imposto la keyboard
     # $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
