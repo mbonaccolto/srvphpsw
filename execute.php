@@ -23,22 +23,19 @@ $text = strtolower($text);
 ##################
 # tastiera inline
 ##################
-if($text == '/keyboard')
-{
-$keyboard = [['A', 'B'],
-             ['C', 'D']];
-
-$replykeyboardmarkup = new Zelenin\Telegram\Bot\Type\ReplyKeyboardMarkup();
-$replykeyboardmarkup->keyboard = $keyboard;
-$replykeyboardmarkup->resize_keyboard = true;
-$replykeyboardmarkup->one_time_keyboard = false;
-
-$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
-$response = $client->sendMessage([
-        'chat_id' => $update->message->chat->id,
-        'text' => "Questa è la tua tastiera di prova",
-        'reply_markup' => $replykeyboardmarkup
-        ]);
+if ($text == '/keyboard') {
+  header("Content-Type: application/json");
+  // la mia risposta è un array JSON composto da chat_id, text, method
+  // chat_id mi consente di rispondere allo specifico utente che ha scritto al bot
+  // text è il testo della risposta
+  $parameters = array('chat_id' => $chatId, "text" => $text);
+  // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
+  $parameters["method"] = "sendMessage";
+  // imposto la inline keyboard
+  $keyboard = ['inline_keyboard' => [[['text' =>  'myText', 'callback_data' => 'myCallbackText']]]];
+  $parameters["reply_markup"] = json_encode($keyboard, true);
+  // converto e stampo l'array JSON sulla response
+  echo json_encode($parameters);
 }
 #####################
 # fine tastiera
@@ -54,7 +51,7 @@ if ($text == '/bullismo') {
 
 if ($text == '/start') {
   header("Content-Type: application/json");
-  $answer = "Ciao<, puoi iniziare a interagire con me digitando un comando con il carattere /. Oppure clicca sulla: /listacomandi";
+  $answer = "Ciao, puoi iniziare a interagire con me digitando un comando con il carattere /. Oppure clicca sulla: /listacomandi";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
