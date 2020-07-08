@@ -1,14 +1,14 @@
 <?php
 $content = file_get_contents("php://input");
-$callback = $keyboard["callback_data"];
 $callback_query_data = $keyboard['inline_keyboard']['callback_data'];
 $update = json_decode($content, true);
 
-
+/*
 if(!$update)
 {
   exit;
 }
+*/
 
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
