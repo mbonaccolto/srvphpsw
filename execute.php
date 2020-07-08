@@ -1,6 +1,8 @@
 <?php
 $content = file_get_contents("php://input");
+$callback = $keyboard["callback_data"];
 $update = json_decode($content, true);
+
 
 if(!$update)
 {
@@ -38,13 +40,19 @@ if ($text == '/keyboard') {
                                       ['text' =>  'Pulsante 3', 'callback_data' => '3'],
                                       ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
   # $keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
-  $callback = $keyboard["callback_data"];
-  $answer =  "Hai premuto il pulsante $callback";
   $parameters["reply_markup"] = json_encode($keyboard, true); // orig
-  # $parameters = array('chat_id' => $chatId, "text" => $answer);
   // converto e stampo l'array JSON sulla response
   echo json_encode($parameters);
 }
+
+if ($callback != null) {
+  header("Content-Type: application/json");
+  $answer =  "Hai premuto il pulsante $callback";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 #####################
 # fine tastiera
 #####################
