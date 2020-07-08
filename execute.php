@@ -31,7 +31,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 17:06";
+    $answer =  "versione 17:12";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -49,10 +49,10 @@ if (($update['message']) != null) {
     // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
     # $parameters["method"] = "sendMessage";
     // imposto la inline keyboard
-    $keyboard = ['inline_keyboard' => [['text' =>  'Pulsante 1', 'callback_data' => '1'], 
+    $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => '1'], 
                                         ['text' =>  'Pulsante 2', 'callback_data' => '2'],
                                         ['text' =>  'Pulsante 3', 'callback_data' => '3'],
-                                        ['text' =>  'Pulsante 4', 'callback_data' => '4']]];
+                                        ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
   
     $parameters["reply_markup"] = json_encode($keyboard, true); // orig
     
