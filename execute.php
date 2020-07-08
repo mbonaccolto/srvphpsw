@@ -3,6 +3,11 @@ $content = file_get_contents("php://input");
 $callback_query_data = $keyboard['inline_keyboard']['callback_data'];
 $update = json_decode($content, true);
 
+if(!$update)
+{
+  exit;
+}
+
 if (($update['message']) != null) {
   /*
   if(!$update)
@@ -26,7 +31,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 16:35";
+    $answer =  "versione 16:45";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -44,13 +49,19 @@ if (($update['message']) != null) {
     // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
     $parameters["method"] = "sendMessage";
     // imposto la inline keyboard
-    # $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => 'myCallbackText']]]]; // orig
+    
+    /*
     $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => '1'], 
                                         ['text' =>  'Pulsante 2', 'callback_data' => '2'],
                                         ['text' =>  'Pulsante 3', 'callback_data' => '3'],
                                         ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
-    # $keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
+  
     $parameters["reply_markup"] = json_encode($keyboard, true); // orig
+    */
+    
+    // imposto la keyboard
+    $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
+
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
   }
@@ -263,10 +274,12 @@ if (($update['message']) != null) {
   echo json_encode($parameters);
 }
 
-else if ($update['inline_keyboard']['callback_data'] != Null) {
+else if ($update["callback_query"] != Null) {
     header("Content-Type: application/json");
     $answer =  "Hai premuto il pulsante $callback";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
 }
+
+
