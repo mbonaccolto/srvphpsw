@@ -1,6 +1,6 @@
 <?php
 $content = file_get_contents("php://input");
-$callback = $keyboard["callback_data"];
+$callback = $keyboard["inline_keyboard"];
 $update = json_decode($content, true);
 
 
