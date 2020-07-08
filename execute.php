@@ -19,6 +19,16 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
+
+// tastiera inline (tasto1)
+
+
+$inline_keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
+$inline_keyboard = json_encode($inline_keyboard);
+
+
+
+
 if ($text == '/bullismo') {
   header("Content-Type: application/json");
   $answer = "per questa tematica dovresti contattare @EducaPari_bot";
