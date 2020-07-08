@@ -32,7 +32,15 @@ if ($text == '/keyboard') {
   // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
   $parameters["method"] = "sendMessage";
   // imposto la inline keyboard
-  $keyboard = ['inline_keyboard' => [[['text' =>  'myText', 'callback_data' => 'myCallbackText']]]];
+  $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante callback', 'callback_data' => 'myCallbackText']]]];
+  
+
+# $inline_keyboard = ['inline_keyboard' => [['text' => 'Tasto1', 'callback_data' => 'pressed_btn1']]];
+$keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
+
+
+
+
   $parameters["reply_markup"] = json_encode($keyboard, true);
   // converto e stampo l'array JSON sulla response
   echo json_encode($parameters);
