@@ -53,8 +53,8 @@ if (($update['message']) != null) {
                                         ['text' =>  'Pulsante 3', 'callback_data' => 'comando 3'],
                                         ['text' =>  'Pulsante 4', 'callback_data' => 'comando 4']]]];
   
-  #  $parameters["reply_markup"] = json_encode($keyboard, true); // orig 
-     $parameters["force_reply"] = json_encode($keyboard, true);
+    $parameters["reply_markup"] = json_encode($keyboard, true); // orig 
+    # $parameters["force_reply"] = json_encode($keyboard, true);
 
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
