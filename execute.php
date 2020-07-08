@@ -3,12 +3,16 @@ $content = file_get_contents("php://input");
 $callback_query_data = $keyboard['inline_keyboard']['callback_data'];
 $update = json_decode($content, true);
 
+if (($update['message']) != null) {
+
+} else if ($update['callback_query'] != Null) {
 /*
 if(!$update)
 {
   exit;
 }
 */
+
 
 $message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
@@ -24,7 +28,7 @@ $text = strtolower($text);
 
 if ($text == "/ver") {
   header("Content-Type: application/json");
-  $answer =  "versione 16:19";
+  $answer =  "versione 16:20";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
