@@ -31,7 +31,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 17:30";
+    $answer =  "versione 17:33";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -56,7 +56,7 @@ if (($update['message']) != null) {
   
     # $parameters["reply_markup"] = json_encode($keyboard, true); // orig
 
-    $parameters = json_encode(['force_reply' => true]);
+    $keyboard = json_encode(['force_reply' => true]);
 
 
     
@@ -64,7 +64,7 @@ if (($update['message']) != null) {
     # $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
 
     // converto e stampo l'array JSON sulla response
-    echo json_encode($parameters);
+    echo json_encode($keyboard);
   }
   
   // tastiera normale (no inline)
