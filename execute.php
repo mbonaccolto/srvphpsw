@@ -23,7 +23,7 @@ $text = strtolower($text);
 ##################
 # tastiera inline
 ##################
-if($update->message->text == '/keyboard')
+if($text == '/keyboard')
 {
 $keyboard = [['A', 'B'],
              ['C', 'D']];
