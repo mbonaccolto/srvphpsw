@@ -1,6 +1,5 @@
 <?php
 $content = file_get_contents("php://input");
-$callback_query_data = $keyboard['inline_keyboard']['callback_data'];
 $update = json_decode($content, true);
 
 if(!$update)
@@ -31,7 +30,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 17:37";
+    $answer =  "versione 17:43";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -49,19 +48,12 @@ if (($update['message']) != null) {
     // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
     $parameters["method"] = "sendMessage";
     // imposto la inline keyboard
-    $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => '1'], 
-                                        ['text' =>  'Pulsante 2', 'callback_data' => '2'],
-                                        ['text' =>  'Pulsante 3', 'callback_data' => '3'],
-                                        ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
+    $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => 'comando 1'], 
+                                        ['text' =>  'Pulsante 2', 'callback_data' => 'comando 2'],
+                                        ['text' =>  'Pulsante 3', 'callback_data' => 'comando 3'],
+                                        ['text' =>  'Pulsante 4', 'callback_data' => 'comando 4']]]];
   
-    $parameters["reply_markup"] = json_encode($keyboard, true); // orig
-
-    # $keyboard = json_encode(['force_reply' => true]);
-
-
-    
-    // imposto la keyboard
-    # $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
+    $parameters["reply_markup"] = json_encode($keyboard, true); // orig 
 
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
