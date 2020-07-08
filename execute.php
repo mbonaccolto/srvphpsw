@@ -20,14 +20,30 @@ $text = trim($text);
 $text = strtolower($text);
 
 
-// tastiera inline (tasto1)
+##################
+# tastiera inline
+##################
+if($update->message->text == '/keyboard')
+{
+$keyboard = [['A', 'B'],
+             ['C', 'D']];
 
+$replykeyboardmarkup = new Zelenin\Telegram\Bot\Type\ReplyKeyboardMarkup();
+$replykeyboardmarkup->keyboard = $keyboard;
+$replykeyboardmarkup->resize_keyboard = true;
+$replykeyboardmarkup->one_time_keyboard = false;
 
-$inline_keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
-$inline_keyboard = json_encode($inline_keyboard);
+$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
+$response = $client->sendMessage([
+        'chat_id' => $update->message->chat->id,
+        'text' => "Questa è la tua tastiera di prova",
+        'reply_markup' => $replykeyboardmarkup
+        ]);
+}
 
-
-
+#####################
+# fine tastiera
+#####################
 
 if ($text == '/bullismo') {
   header("Content-Type: application/json");
