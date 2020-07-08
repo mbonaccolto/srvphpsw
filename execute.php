@@ -41,7 +41,7 @@ if ($text == '/keyboard') {
   $callback = $keyboard["callback_data"];
   $answer =  "Hai premuto il pulsante $callback";
   $parameters["reply_markup"] = json_encode($keyboard, true); // orig
-  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  # $parameters = array('chat_id' => $chatId, "text" => $answer);
   // converto e stampo l'array JSON sulla response
   echo json_encode($parameters);
 }
