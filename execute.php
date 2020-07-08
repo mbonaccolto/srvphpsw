@@ -31,7 +31,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 16:45";
+    $answer =  "versione 17:02";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -50,17 +50,17 @@ if (($update['message']) != null) {
     $parameters["method"] = "sendMessage";
     // imposto la inline keyboard
     
-    /*
-    $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => '1'], 
+    
+    $keyboard = ['inline_keyboard' => [['text' =>  'Pulsante 1', 'callback_data' => '1'], 
                                         ['text' =>  'Pulsante 2', 'callback_data' => '2'],
                                         ['text' =>  'Pulsante 3', 'callback_data' => '3'],
-                                        ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
+                                        ['text' =>  'Pulsante 4', 'callback_data' => '4']]];
   
     $parameters["reply_markup"] = json_encode($keyboard, true); // orig
-    */
+    
     
     // imposto la keyboard
-    $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
+    # $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
 
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
@@ -274,7 +274,7 @@ if (($update['message']) != null) {
   echo json_encode($parameters);
 }
 
-else if ($update["callback_query"] != Null) {
+else if ($update["callback_data"] != Null) {
     header("Content-Type: application/json");
     $answer =  "Hai premuto il pulsante $callback";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
