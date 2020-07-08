@@ -54,7 +54,7 @@ if ($text == '/bullismo') {
 
 if ($text == '/start') {
   header("Content-Type: application/json");
-  $answer = "Ciao, puoi iniziare a interagire con me digitando un comando con il carattere /. Oppure clicca sulla: /listacomandi";
+  $answer = "Ciao<, puoi iniziare a interagire con me digitando un comando con il carattere /. Oppure clicca sulla: /listacomandi";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
