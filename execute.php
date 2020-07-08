@@ -1,6 +1,7 @@
 <?php
 $content = file_get_contents("php://input");
-$callback = $keyboard["inline_keyboard"];
+$callback = $keyboard["callback_data"];
+$callback_query_data = $keyboard['inline_keyboard']['callback_data'];
 $update = json_decode($content, true);
 
 
@@ -21,6 +22,13 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
+if ($text == "/ver") {
+  header("Content-Type: application/json");
+  $answer =  "versione 16:16";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
 
 ##################
 # tastiera inline
@@ -45,7 +53,7 @@ if ($text == '/keyboard') {
   echo json_encode($parameters);
 }
 
-if ($callback != null) {
+if ($callback_query_data != null) {
   header("Content-Type: application/json");
   $answer =  "Hai premuto il pulsante $callback";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
