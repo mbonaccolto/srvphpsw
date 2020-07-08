@@ -31,7 +31,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 17:14";
+    $answer =  "versione 17:18";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -63,6 +63,21 @@ if (($update['message']) != null) {
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
   }
+  
+  // tastiera normale (no inline)
+ if ($text == '/keyboard1') {
+   header("Content-Type: application/json");
+  // la mia risposta è un array JSON composto da chat_id, text, method
+  // chat_id mi consente di rispondere allo specifico utente che ha scritto al bot
+  // text è il testo della risposta
+  $parameters = array('chat_id' => $chatId, "text" => $text);
+  // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
+  $parameters["method"] = "sendMessage";
+  // imposto la keyboard
+  $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
+  // converto e stampo l'array JSON sulla response
+  echo json_encode($parameters);
+ }
 
   #####################
   # fine tastiera
