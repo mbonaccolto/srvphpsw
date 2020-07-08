@@ -26,7 +26,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 16:27";
+    $answer =  "versione 16:35";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -263,7 +263,7 @@ if (($update['message']) != null) {
   echo json_encode($parameters);
 }
 
-else if ($update['callback_query'] != Null) {
+else if ($update['inline_keyboard']['callback_data'] != Null) {
     header("Content-Type: application/json");
     $answer =  "Hai premuto il pulsante $callback";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
