@@ -4,8 +4,6 @@ $callback_query_data = $keyboard['inline_keyboard']['callback_data'];
 $update = json_decode($content, true);
 
 if (($update['message']) != null) {
-
-} else if ($update['callback_query'] != Null) {
   /*
   if(!$update)
   {
@@ -28,7 +26,7 @@ if (($update['message']) != null) {
 
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 16:25";
+    $answer =  "versione 16:27";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -54,14 +52,6 @@ if (($update['message']) != null) {
     # $keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
     $parameters["reply_markup"] = json_encode($keyboard, true); // orig
     // converto e stampo l'array JSON sulla response
-    echo json_encode($parameters);
-  }
-
-  if ($callback_query_data != null) {
-    header("Content-Type: application/json");
-    $answer =  "Hai premuto il pulsante $callback";
-    $parameters = array('chat_id' => $chatId, "text" => $answer);
-    $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
   }
 
@@ -271,4 +261,12 @@ if (($update['message']) != null) {
   // $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
+}
+
+} else if ($update['callback_query'] != Null) {
+    header("Content-Type: application/json");
+    $answer =  "Hai premuto il pulsante $callback";
+    $parameters = array('chat_id' => $chatId, "text" => $answer);
+    $parameters["method"] = "sendMessage";
+    echo json_encode($parameters);
 }
