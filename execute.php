@@ -23,7 +23,23 @@ $text = strtolower($text);
 ##################
 # tastiera inline
 ##################
+if($update->message->text == '/keyboard')
+{
+$keyboard = [['A', 'B'],
+             ['C', 'D']];
 
+$replykeyboardmarkup = new Zelenin\Telegram\Bot\Type\ReplyKeyboardMarkup();
+$replykeyboardmarkup->keyboard = $keyboard;
+$replykeyboardmarkup->resize_keyboard = true;
+$replykeyboardmarkup->one_time_keyboard = false;
+
+$response = $client->sendChatAction(['chat_id' => $update->message->chat->id, 'action' => 'typing']);
+$response = $client->sendMessage([
+        'chat_id' => $update->message->chat->id,
+        'text' => "Questa è la tua tastiera di prova",
+        'reply_markup' => $replykeyboardmarkup
+        ]);
+}
 #####################
 # fine tastiera
 #####################
