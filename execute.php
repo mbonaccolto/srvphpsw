@@ -35,7 +35,7 @@ if ($text == '/keyboard') {
   # $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => 'myCallbackText']]]]; // orig
   $keyboard = ['inline_keyboard' => [[['text' =>  'Pulsante 1', 'callback_data' => '1'], 
                                       ['text' =>  'Pulsante 2', 'callback_data' => '2'],
-                                      ['text' =>  'Pulsante 3', 'callback_data' => '3']
+                                      ['text' =>  'Pulsante 3', 'callback_data' => '3'],
                                       ['text' =>  'Pulsante 4', 'callback_data' => '4']]]];
   # $keyboard = array('inline_keyboard' => array(array('text' => 'Risposta A', 'callback_data' => 'A'),array('text' => "Risposta B",'callback_data' => 'B')));
   $callback = keyboard["callback_data"];
