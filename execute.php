@@ -24,7 +24,7 @@ $text = strtolower($text);
 
 if ($text == "/ver") {
   header("Content-Type: application/json");
-  $answer =  "versione 16:16";
+  $answer =  "versione 16:19";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
