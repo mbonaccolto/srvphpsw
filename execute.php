@@ -10,18 +10,20 @@ if (isset($callback_query)){
     $chat_id = $message->chat->id;
   switch($data){
         case "comando 1":
-           bot('SendMessage',[
-               'chat_id' => $chat_id,
-               'text' => "hai cliccato sul pulsante 1"
-           ]);
-           break;
+        header("Content-Type: application/json");
+        $answer =  "hai cliccato il pulsante 1";
+        $parameters = array('chat_id' => $chatId, "text" => $answer);
+        $parameters["method"] = "sendMessage";
+        echo json_encode($parameters);
+        break;
 
-       case "comando 2":
-           bot('SendMessage',[
-               'chat_id' => $chat_id,
-               'text' => "hai cliccato sul pulsante 2"
-            ]);
-            break;
+        case "comando 2":
+        header("Content-Type: application/json");
+        $answer =  "hai cliccato il pulsante 2";
+        $parameters = array('chat_id' => $chatId, "text" => $answer);
+        $parameters["method"] = "sendMessage";
+        echo json_encode($parameters);
+        break;
      }
    }
 
