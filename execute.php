@@ -1,7 +1,6 @@
 <?php
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
-$data = $callback_query->callback_data;
 
 if(!$update)
 {
@@ -28,10 +27,11 @@ if (($update['message']) != null) {
 
   $text = trim($text);
   $text = strtolower($text);
-
+  
+  
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 17:54";
+    $answer =  "versione 13:40";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -40,32 +40,9 @@ if (($update['message']) != null) {
   ##################
   # tastiera inline
   ##################
-    
-if (isset($callback_query)){
-    //Fetching callback
-    $data = $callback_query->data;
-    $message = $callback_query->message;
-    $message_id = $callback_query->message->message_id;
-    $chat_id = $message->chat->id;
-    switch($data){
-    case "comando 1":
-        header("Content-Type: application/json");
-        $answer =  "hai cliccato il pulsante 1";
-        $parameters = array('chat_id' => $chatId, "text" => $answer);
-        $parameters["method"] = "sendMessage";
-        echo json_encode($parameters);
-    break;
-
-    case "comando 2":
-        header("Content-Type: application/json");
-        $answer =  "hai cliccato il pulsante 2";
-        $parameters = array('chat_id' => $chatId, "text" => $answer);
-        $parameters["method"] = "sendMessage";
-        echo json_encode($parameters);
-    break;
-    }
-}
+  
   if ($text == '/keyboard') {
+    /*
     header("Content-Type: application/json");
     // la mia risposta è un array JSON composto da chat_id, text, method
     // chat_id mi consente di rispondere allo specifico utente che ha scritto al bot
@@ -82,6 +59,19 @@ if (isset($callback_query)){
     $parameters["reply_markup"] = json_encode($keyboard, true); // orig 
     # $parameters["force_reply"] = json_encode($keyboard, true);
 
+    // converto e stampo l'array JSON sulla response
+    echo json_encode($parameters);
+    */
+    header("Content-Type: application/json");
+    // la mia risposta è un array JSON composto da chat_id, text, method
+    // chat_id mi consente di rispondere allo specifico utente che ha scritto al bot
+    // text è il testo della risposta
+    $parameters = array('chat_id' => $chatId, "text" => $text);
+    // method è il metodo per l'invio di un messaggio (cfr. API di Telegram)
+    $parameters["method"] = "sendMessage";
+    // imposto la inline keyboard
+    $keyboard = ['inline_keyboard' => [[['text' =>  'myText', 'callback_data' => 'myCallbackText']]]];
+    $parameters["reply_markup"] = json_encode($keyboard, true);
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
   }
