@@ -31,7 +31,7 @@ if (($update['message']) != null) {
   
   if ($text == "/ver") {
     header("Content-Type: application/json");
-    $answer =  "versione 13:40";
+    $answer =  "versione 14:09";
     $parameters = array('chat_id' => $chatId, "text" => $answer);
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
@@ -41,7 +41,7 @@ if (($update['message']) != null) {
   # tastiera inline
   ##################
   
- # if ($text == '/keyboard') {
+ if ($text == '/keyboard') {
     
     header("Content-Type: application/json");
     // la mia risposta è un array JSON composto da chat_id, text, method
@@ -61,7 +61,7 @@ if (($update['message']) != null) {
 
     // converto e stampo l'array JSON sulla response
     echo json_encode($parameters);
-#  }
+  }
   
   // tastiera normale (no inline)
  if ($text == '/keyboard1') {
