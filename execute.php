@@ -2,31 +2,6 @@
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 $data = $callback_query->callback_data;
-if (isset($callback_query)){
-    //Fetching callback
-    $data = $callback_query->data;
-    $message = $callback_query->message;
-    $message_id = $callback_query->message->message_id;
-    $chat_id = $message->chat->id;
-  switch($data){
-        case "comando 1":
-        header("Content-Type: application/json");
-        $answer =  "hai cliccato il pulsante 1";
-        $parameters = array('chat_id' => $chatId, "text" => $answer);
-        $parameters["method"] = "sendMessage";
-        echo json_encode($parameters);
-        break;
-
-        case "comando 2":
-        header("Content-Type: application/json");
-        $answer =  "hai cliccato il pulsante 2";
-        $parameters = array('chat_id' => $chatId, "text" => $answer);
-        $parameters["method"] = "sendMessage";
-        echo json_encode($parameters);
-        break;
-     }
-   }
-
 
 if(!$update)
 {
@@ -65,6 +40,31 @@ if (($update['message']) != null) {
   ##################
   # tastiera inline
   ##################
+    
+if (isset($callback_query)){
+    //Fetching callback
+    $data = $callback_query->data;
+    $message = $callback_query->message;
+    $message_id = $callback_query->message->message_id;
+    $chat_id = $message->chat->id;
+    switch($data){
+    case "comando 1":
+        header("Content-Type: application/json");
+        $answer =  "hai cliccato il pulsante 1";
+        $parameters = array('chat_id' => $chatId, "text" => $answer);
+        $parameters["method"] = "sendMessage";
+        echo json_encode($parameters);
+    break;
+
+    case "comando 2":
+        header("Content-Type: application/json");
+        $answer =  "hai cliccato il pulsante 2";
+        $parameters = array('chat_id' => $chatId, "text" => $answer);
+        $parameters["method"] = "sendMessage";
+        echo json_encode($parameters);
+    break;
+    }
+}
   if ($text == '/keyboard') {
     header("Content-Type: application/json");
     // la mia risposta è un array JSON composto da chat_id, text, method
