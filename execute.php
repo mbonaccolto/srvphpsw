@@ -24,7 +24,7 @@ if (isset($callback_query)){
             break;
      }
    }
-}
+
 
 if(!$update)
 {
