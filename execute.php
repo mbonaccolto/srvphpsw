@@ -1,6 +1,30 @@
 <?php
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
+$data = $callback_query->callback_data;
+if (isset($callback_query)){
+    //Fetching callback
+    $data = $callback_query->data;
+    $message = $callback_query->message;
+    $message_id = $callback_query->message->message_id;
+    $chat_id = $message->chat->id;
+  switch($data){
+        case "1":
+           bot('SendMessage',[
+               'chat_id' => $chat_id,
+               'text' => "1"
+           ]);
+           break;
+
+       case "2":
+           bot('SendMessage',[
+               'chat_id' => $chat_id,
+               'text' => "2"
+            ]);
+            break;
+     }
+   }
+}
 
 if(!$update)
 {
