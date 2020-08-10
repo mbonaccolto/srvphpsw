@@ -9,17 +9,17 @@ if (isset($callback_query)){
     $message_id = $callback_query->message->message_id;
     $chat_id = $message->chat->id;
   switch($data){
-        case "1":
+        case "comando 1":
            bot('SendMessage',[
                'chat_id' => $chat_id,
-               'text' => "1"
+               'text' => "hai cliccato sul pulsante 1"
            ]);
            break;
 
-       case "2":
+       case "comando 2":
            bot('SendMessage',[
                'chat_id' => $chat_id,
-               'text' => "2"
+               'text' => "hai cliccato sul pulsante 2"
             ]);
             break;
      }
