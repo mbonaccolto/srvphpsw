@@ -778,9 +778,9 @@ if ($text == '/contrastobullo') { //95
 if ($text == '/gioco_azzardo_gap') { //101
   header("Content-Type: application/json");
   $answer = "Scegli un argomento specifico tra quelli proposti:
-    •	/gioco_azzardo_definizione
-    •	/gioco_azzardo_online_definizione  
-    •	/rischi_del_gioco_online
+    •	/gioco_azzardo_definizione_gap
+    •	/gioco_azzardo_online_definizione_gap
+    •	/rischi_del_gioco_online_gap
     •	/caratteristiche_gioco_azzardo
     •	/gioco_azzardo_soggetti
     •	/conseguenze_del_gioco
