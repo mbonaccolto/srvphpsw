@@ -823,6 +823,54 @@ if ($text == '/rischi_del_gioco_online_gap') { //104
   echo json_encode($parameters);
 }
 
+if ($text == '/caratteristiche_gioco_azzardo') { //105
+  header("Content-Type: application/json");
+  $answer = "/alea – la fortuna
+  /scommessa – caratteristica essenziale
+  /minimizzazione_rischio – valutazione rischio
+  /tipologie_di_gioco
+  /principali_fattori_rischio
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/alea') { //106
+  header("Content-Type: application/json");
+  $answer = "Con il termine Alea intendiamo la Fortuna. Il risultato dell’azione di gioco dipende infatti esclusivamente dalla fortuna, dal caso (RISULTATO ALEATORIO) Il giocatore e le sue abilità non influenzano la vincita e la perdita";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/scommessa') { //107
+  header("Content-Type: application/json");
+  $answer = "La scommessa è una delle caratteristiche essenziali del gioco d’azzardo. Il giocatore per giocare mette in palio una posta, una somma di denaro o un oggetto di valore che una volta puntati non possono essere più ritirati.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/minimizzazione_rischio') { //108
+  header("Content-Type: application/json");
+  $answer = "il giocatore tende a non ammettere di avere un problema, a minimizzare la situazione sottovalutando i  rischi del gioco. Non riesce quindi a chiedere aiuto nel modo corretto.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/tipologie_di_gioco') { //109
+  header("Content-Type: application/json");
+  $answer = "Conosci le varie tipologie del gioco d’azzardo? Continua ad approfondire l’argomento utilizzando i comandi della chat bot
+  •	/gioco_informale_ricreativo
+  •	/gioco_problematico
+  •	/gioco_patologico";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 if ($text == '/gioco_informale_ricreativo') { //110
   header("Content-Type: application/json");
   $answer = "Rischio del gioco online:
