@@ -775,7 +775,7 @@ if ($text == '/contrastobullo') { //95
 //---- Sezione GAP (Gioco Azzardo Patologico) ----//
 
 
-if ($text == '/gioco_azzardo') { //101
+if ($text == '/gioco_azzardo_gap') { //101
   header("Content-Type: application/json");
   $answer = "Scegli un argomento specifico tra quelli proposti:
     •	/gioco_azzardo_definizione
@@ -791,7 +791,7 @@ if ($text == '/gioco_azzardo') { //101
   echo json_encode($parameters);
 }
 
-if ($text == '/gioco_azzardo_definizione') { //102
+if ($text == '/gioco_azzardo_definizione_gap') { //102
   header("Content-Type: application/json");
   $answer = "Il gioco d’azzardo è una tipologia di gioco nel quale ricorre il fine di lucro e la vincita o perdita è completamente o quasi aleatoria. Esso consiste nello scommettere beni, principalmente denaro sull’esito di un evento futuro.  
   Per saperne di più guarda il video:
@@ -802,7 +802,7 @@ if ($text == '/gioco_azzardo_definizione') { //102
   echo json_encode($parameters);
 }
 
-if ($text == '/gioco_azzardo_online') { //103
+if ($text == '/gioco_azzardo_online_gap') { //103
   header("Content-Type: application/json");
   $answer = "Il gambling online, conosciuto anche come Internet gambling o Gambling è un termine generale con cui vengono indicati i diversi modi di giocare d’azzardo tramite internet.
   Sono infatti disponibili una vasta gamma di giochi sul web, tra cui i più popolari sono il Poker, il Casino, le scommesse sportive, il “mobile gambling” (giochi disponibili per tablet e smartphone), il bingo e la lotteria.
@@ -813,7 +813,7 @@ if ($text == '/gioco_azzardo_online') { //103
   echo json_encode($parameters);
 }
 
-if ($text == '/rischi_gioco_online') { //104
+if ($text == '/rischi_gioco_online_gap') { //104
   header("Content-Type: application/json");
   $answer = "Rischio del gioco online:
   https://socialmi.ats-milano.it/165/social/wiki/i7Sda2V6U9csO3_28092020_rischiogiocoonline.png";
