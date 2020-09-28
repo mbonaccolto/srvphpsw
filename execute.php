@@ -358,7 +358,8 @@ if ($text == '/dipendenze') { //40 ex /sostanze
 Vuoi dirmi cosa ti interessa di più?
 /approfondimento_sostanze – Se vuoi saperne di più
 /rischi – per conoscere i rischi legati alle sostanze, le leggi e leggere delle testimonianze
-/sostanze_aiuto – ho bisogno di aiuto";
+/sostanze_aiuto – ho bisogno di aiuto
+/gioco_azzardo - gioco d'azzardo";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
