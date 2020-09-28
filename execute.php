@@ -873,8 +873,28 @@ if ($text == '/tipologie_di_gioco') { //109
 
 if ($text == '/gioco_informale_ricreativo') { //110
   header("Content-Type: application/json");
-  $answer = "Rischio del gioco online:
+  $answer = "Gioco informale ricreativo:
   https://socialmi.ats-milano.it/165/social/wiki/RLeGFWAClRfDR9_28092020_giocoricreativo.png";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/gioco_problematico') { //111
+  header("Content-Type: application/json");
+  $answer = "Gioco problematico:
+  https://socialmi.ats-milano.it/165/social/wiki/YztjJ1TICmKIP4_28092020_giocoproblematico.png";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/gioco_patologico') { //112
+  header("Content-Type: application/json");
+  $answer = "Gioco patologico:
+  https://socialmi.ats-milano.it/165/social/wiki/QnajdbdB1lLoxm_28092020_giocopatologico.png";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
