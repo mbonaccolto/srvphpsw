@@ -772,6 +772,56 @@ if ($text == '/contrastobullo') { //95
   echo json_encode($parameters);
 }
 
+//---- Sezione GAP (Gioco Azzardo Patologico) ----//
+
+
+if ($text == '/gioco_azzardo') { //101
+  header("Content-Type: application/json");
+  $answer = "Scegli un argomento specifico tra quelli proposti:
+    •	/gioco_azzardo_definizione
+    •	/gioco_azzardo_online_definizione  
+    •	/rischi_del_gioco_online
+    •	/caratteristiche_gioco_azzardo
+    •	/gioco_azzardo_soggetti
+    •	/conseguenze_del_gioco
+    •	/gioco_azzardo_ho_bisogno_di_aiuto
+    •	/normativa_gap";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/gioco_azzardo_definizione') { //102
+  header("Content-Type: application/json");
+  $answer = "Il gioco d’azzardo è una tipologia di gioco nel quale ricorre il fine di lucro e la vincita o perdita è completamente o quasi aleatoria. Esso consiste nello scommettere beni, principalmente denaro sull’esito di un evento futuro.  
+  Per saperne di più guarda il video:
+  https://www.youtube.com/watch?v=YRZZ3mKdZWA 
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/gioco_azzardo_online') { //103
+  header("Content-Type: application/json");
+  $answer = "Il gambling online, conosciuto anche come Internet gambling o Gambling è un termine generale con cui vengono indicati i diversi modi di giocare d’azzardo tramite internet.
+  Sono infatti disponibili una vasta gamma di giochi sul web, tra cui i più popolari sono il Poker, il Casino, le scommesse sportive, il “mobile gambling” (giochi disponibili per tablet e smartphone), il bingo e la lotteria.
+  Per approfondire clicca qui:
+  https://www.youtube.com/watch?v=66h0C97IGcQ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/rischi_gioco_online') { //104
+  header("Content-Type: application/json");
+  $answer = "Rischio del gioco online:
+  https://socialmi.ats-milano.it/165/social/wiki/i7Sda2V6U9csO3_28092020_rischiogiocoonline.png";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
 //---- Altro ----//
 
