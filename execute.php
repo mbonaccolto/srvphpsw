@@ -822,6 +822,15 @@ if ($text == '/rischi_del_gioco_online_gap') { //104
   echo json_encode($parameters);
 }
 
+if ($text == '/gioco_informale_ricreativo') { //110
+  header("Content-Type: application/json");
+  $answer = "Rischio del gioco online:
+  https://socialmi.ats-milano.it/165/social/wiki/RLeGFWAClRfDR9_28092020_giocoricreativo.png";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 
 //---- Altro ----//
 
