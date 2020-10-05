@@ -358,8 +358,7 @@ if ($text == '/dipendenze') { //40 ex /sostanze
 Vuoi dirmi cosa ti interessa di più?
 /approfondimento_sostanze – Se vuoi saperne di più
 /rischi – per conoscere i rischi legati alle sostanze, le leggi e leggere delle testimonianze
-/sostanze_aiuto – ho bisogno di aiuto
-/gioco_azzardo - gioco d'azzardo";
+/sostanze_aiuto – ho bisogno di aiuto";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -560,6 +559,8 @@ https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidi
   echo json_encode($parameters);
 }
 
+//--- sezione sostituita da GAP ----//
+/*
 if ($text == '/gioco_azzardo') { //60
   header("Content-Type: application/json");
   $answer = "Seleziona una tra queste opzioni: 
@@ -597,6 +598,8 @@ https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidi
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
+
+*/
 
 
 
