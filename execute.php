@@ -779,23 +779,23 @@ if ($text == '/contrastobullo') { //95
 //---- Sezione GAP (Gioco Azzardo Patologico) ----//
 
 
-if ($text == '/gioco_azzardo_gap') { //101
+if ($text == '/gioco_azzardo') { //101
   header("Content-Type: application/json");
   $answer = "Scegli un argomento specifico tra quelli proposti:
-    •	/gioco_azzardo_definizione_gap
-    •	/gioco_azzardo_online_definizione_gap
-    •	/rischi_del_gioco_online_gap
+    •	/gioco_azzardo_definizione
+    •	/gioco_azzardo_online_definizione
+    •	/rischi_del_gioco_online
     •	/caratteristiche_gioco_azzardo
     •	/gioco_azzardo_soggetti
     •	/conseguenze_del_gioco
-    •	/gioco_azzardo_ho_bisogno_di_aiuto
+    •	/gioco_azzardo_aiuto_gap
     •	/normativa_gap";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
 }
 
-if ($text == '/gioco_azzardo_definizione_gap') { //102
+if ($text == '/gioco_azzardo_definizione') { //102
   header("Content-Type: application/json");
   $answer = "Il gioco d’azzardo è una tipologia di gioco nel quale ricorre il fine di lucro e la vincita o perdita è completamente o quasi aleatoria. Esso consiste nello scommettere beni, principalmente denaro sull’esito di un evento futuro.  
   Per saperne di più guarda il video:
@@ -806,7 +806,7 @@ if ($text == '/gioco_azzardo_definizione_gap') { //102
   echo json_encode($parameters);
 }
 
-if ($text == '/gioco_azzardo_online_definizione_gap') { //103
+if ($text == '/gioco_azzardo_online_definizione') { //103
   header("Content-Type: application/json");
   $answer = "Il gambling online, conosciuto anche come Internet gambling o Gambling è un termine generale con cui vengono indicati i diversi modi di giocare d’azzardo tramite internet.
   Sono infatti disponibili una vasta gamma di giochi sul web, tra cui i più popolari sono il Poker, il Casino, le scommesse sportive, il “mobile gambling” (giochi disponibili per tablet e smartphone), il bingo e la lotteria.
@@ -817,7 +817,7 @@ if ($text == '/gioco_azzardo_online_definizione_gap') { //103
   echo json_encode($parameters);
 }
 
-if ($text == '/rischi_del_gioco_online_gap') { //104
+if ($text == '/rischi_del_gioco_online') { //104
   header("Content-Type: application/json");
   $answer = "Rischio del gioco online:
   https://socialmi.ats-milano.it/165/social/wiki/i7Sda2V6U9csO3_28092020_rischiogiocoonline.png";
@@ -832,7 +832,6 @@ if ($text == '/caratteristiche_gioco_azzardo') { //105
   /scommessa – caratteristica essenziale
   /minimizzazione_rischio – valutazione rischio
   /tipologie_di_gioco
-  /principali_fattori_rischio
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -877,7 +876,7 @@ if ($text == '/tipologie_di_gioco') { //109
 if ($text == '/gioco_informale_ricreativo') { //110
   header("Content-Type: application/json");
   $answer = "Gioco informale ricreativo:
-  https://socialmi.ats-milano.it/165/social/wiki/RLeGFWAClRfDR9_28092020_giocoricreativo.png";
+  https://socialmi.ats-milano.it/165/social/wiki/sG0PgKUghL4Mcd_05102020_GiocoRicreativofine.jpg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -887,7 +886,7 @@ if ($text == '/gioco_informale_ricreativo') { //110
 if ($text == '/gioco_problematico') { //111
   header("Content-Type: application/json");
   $answer = "Gioco problematico:
-  https://socialmi.ats-milano.it/165/social/wiki/YztjJ1TICmKIP4_28092020_giocoproblematico.png";
+  https://socialmi.ats-milano.it/165/social/wiki/k92OSw8znUTmLV_05102020_GiocoProblematicofine.jpg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -897,7 +896,7 @@ if ($text == '/gioco_problematico') { //111
 if ($text == '/gioco_patologico') { //112
   header("Content-Type: application/json");
   $answer = "Gioco patologico:
-  https://socialmi.ats-milano.it/165/social/wiki/QnajdbdB1lLoxm_28092020_giocopatologico.png";
+  https://socialmi.ats-milano.it/165/social/wiki/fxziEVMXgMavK0_05102020_GiocoPatologicofine.jpg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
