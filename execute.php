@@ -786,9 +786,9 @@ if ($text == '/gioco_azzardo') { //101
     •	/gioco_azzardo_online_definizione
     •	/rischi_del_gioco_online
     •	/caratteristiche_gioco_azzardo
-    •	/gioco_azzardo_soggetti
+    •	/soggetti_gioco_azzardo
     •	/conseguenze_del_gioco
-    •	/gioco_azzardo_aiuto_gap
+    •	/gioco_azzardo_aiuto
     •	/normativa_gap";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -820,7 +820,7 @@ if ($text == '/gioco_azzardo_online_definizione') { //103
 if ($text == '/rischi_del_gioco_online') { //104
   header("Content-Type: application/json");
   $answer = "Rischio del gioco online:
-  https://socialmi.ats-milano.it/165/social/wiki/i7Sda2V6U9csO3_28092020_rischiogiocoonline.png";
+  https://socialmi.ats-milano.it/165/social/wiki/xuZdttPfEE22gI_05102020_rischiogiocoonline.png";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -897,6 +897,43 @@ if ($text == '/gioco_patologico') { //112
   header("Content-Type: application/json");
   $answer = "Gioco patologico:
   https://socialmi.ats-milano.it/165/social/wiki/fxziEVMXgMavK0_05102020_GiocoPatologicofine.jpg";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/soggetti_gioco_azzardo') { //113
+  header("Content-Type: application/json");
+  $answer = "Ogni età ha conseguenze diverse. Per approfondire, clicca sulla fascia d’età ti rappresenta. 
+  •	/adolescenti_gap
+  •	/popolazione_generale_gap";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/adolescenti_gap') { //114
+  header("Content-Type: application/json");
+  $answer = "
+  Nonostante vi sia il divieto di gioco d’azzardo per i minori di 18 anni, questa norma viene costantemente violata, moltissimi sono gli adolescenti che giocano. Gli adolescenti si impegnano in molte forme di gioco d’azzardo regolamentate e non, comprese la lotteria, i gratta e vinci, le scommesse e il poker. Il gioco è percepito come una attività “normale” e socialmente accettabile. Le principali motivazioni al gioco sono:
+  •	eccitamento
+  •	sfida
+  •	rischio
+  •	desiderio di vincere soldi
+  Se hai bisogno di aiuto:
+  /gioco_azzardo_aiuto
+";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/popolazione_generale_gap') { //115
+  header("Content-Type: application/json");
+  $answer = "Il gioco d’azzardo coinvolge sia gli adulti che gli anziani. Gli adulti che sono inseriti all’interno del mercato del lavoro hanno la possibilità di avere denaro immediato da poter giocare. 
+  Il gioco d’azzardo per molte persone è un comportamento privo di rischi, un passatempo che offre l’illusione momentanea di provare l’emozione di una vincita, ma può facilmente innescare una spirale che può portare a giocarsi tutto: affetti e denaro.  
+  Per quanto riguarda la popolazione degli over 65 risulta essere particolarmente vulnerabile: la quotidianità, il tempo libero, la tendenza all’isolamento e la disponibilità finanziaria della pensione, rappresentano tutti elementi che possono favorire il comportamento di gioco. 
+  ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
