@@ -828,10 +828,12 @@ if ($text == '/rischi_del_gioco_online') { //104
 
 if ($text == '/caratteristiche_gioco_azzardo') { //105
   header("Content-Type: application/json");
-  $answer = "/alea – la fortuna
+  $answer = "
+  /alea – la fortuna
   /scommessa – caratteristica essenziale
-  /principali_fattori_rischio – valutazione rischio
-  /tipologie_di_gioco
+  /principali_fattori_rischio – i fattori di rischio
+  /minimizzazione_rischio_gap – minimizzazione del rischio
+  /tipologie_di_gioco - i tipi di gioco
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -854,7 +856,7 @@ if ($text == '/scommessa') { //107
   echo json_encode($parameters);
 }
 
-if ($text == '/minimizzazione_rischio') { //108
+if ($text == '/minimizzazione_rischio_gap') { //108
   header("Content-Type: application/json");
   $answer = "il giocatore tende a non ammettere di avere un problema, a minimizzare la situazione sottovalutando i  rischi del gioco. Non riesce quindi a chiedere aiuto nel modo corretto.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
