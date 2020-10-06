@@ -999,6 +999,68 @@ if ($text == '/famiglia_gap') { //120
   echo json_encode($parameters);
 }
 
+if ($text == '/conseguenze_del_gioco') { //121
+  header("Content-Type: application/json");
+  $answer = "Le conseguenze del gioco d’azzardo patologico possono riguardare:
+  /perdita_di_denaro – la perdita di denaro
+  /relazioni_gap – la perdita delle relazioni a cui teniamo
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/relazioni_gap') { //122
+  header("Content-Type: application/json");
+  $answer = "Il giocatore fa un patto con la sorte e oltre al denaro scommette e perde i suoi affetti. 
+  Guarda il seguente video:
+  https://www.youtube.com/watch?v=8PROyL-nbmM
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/perdita_di_denaro') { //123
+  header("Content-Type: application/json");
+  $answer = "Quando giochiamo spesso, iniziamo ad accumulare perdite. 
+  Allora si fa strada l’idea di recuperare il denaro speso. 
+  Nel tempo il divertimento scompare e prevale la preoccupazione di tornare in possesso di quanto si è perso. 
+  Il gioco diventa uno sfogo per la tensione e una preoccupazione che occupa la mente. 
+  Non è un meccanismo strano o misterioso: la mente umana ha una naturale avversione alle perdite, che cerchiamo di evitare in ogni modo. 
+  Questa tendenza è così forte da spingerci a cercare di recuperare il denaro perso anche quando è impossibile. O quando non conviene più. 
+  Per questo molti giocatori entrano in una spirale viziosa: continuano a giocare nel vano tentativo di rientrare in possesso di quanto ormai perso, quando è evidente che il gioco è proprio la causa della perdita. Un giocatore può tentare di recuperare all’infinito il denaro perso a causa di questo meccanismo psicologico, accumulando così nuove perdite ed entrando in uno stato di dipendenza. 
+  Alla base non c’è più l’ebbrezza di vincere, ma il dolore di perdere.
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/gioco_azzardo_aiuto') { //124
+  header("Content-Type: application/json");
+  $answer = "Scarica il file pdf allegato per trovare i riferimenti utili:
+  https://socialmi.ats-milano.it/165/social/wiki/AUCkcAEgZyOBcf_05102020_aiutogap.pdf
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/normativa_gap') { //125
+  header("Content-Type: application/json");
+  $answer = "Su quale tipo di normativa vuoi informarti?
+  Sei minorenne? Clicca qui:
+  https://socialmi.ats-milano.it/165/social/wiki/rO4LCRMYuSASBF_05102020_normativaminori.png
+
+  Sei maggiorenne? Clicca qui:
+  https://socialmi.ats-milano.it/165/social/wiki/UelDlCrAxkBSaL_05102020_normativamaggiorenni.png
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
 //---- Altro ----//
 
 if ($text == '/foodgame') {
