@@ -830,7 +830,7 @@ if ($text == '/caratteristiche_gioco_azzardo') { //105
   header("Content-Type: application/json");
   $answer = "/alea – la fortuna
   /scommessa – caratteristica essenziale
-  /minimizzazione_rischio – valutazione rischio
+  /principali_fattori_rischio – valutazione rischio
   /tipologie_di_gioco
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
@@ -939,6 +939,65 @@ if ($text == '/popolazione_generale_gap') { //115
   echo json_encode($parameters);
 }
 
+if ($text == '/principali_fattori_rischio') { //116
+  header("Content-Type: application/json");
+  $answer = "Quali dei seguenti argomenti sui fattori di rischio vuoi approfondire?
+  •	/eta_gap - fattori di rischi legato all'età
+  •	/gruppo_dei_pari_gap - fattori di rischi legato al gruppo dei pari
+  •	/uso_di_sostanze_gap - correlazione tra il gioco d’azzardo e l’uso di sostanze
+  •	/famiglia_gap - famigliari o parenti che sono stati o sono giocatori d’azzardo
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/eta_gap') { //117
+  header("Content-Type: application/json");
+  $answer = "Molti studi concordano sul riconoscere che l’incontro precoce con il gioco d’azzardo può essere considerato un importante fattore di rischio per il futuro. 
+  L’età di inizio, similarmente a quanto accade in tutte le forme di dipendenza, è un importante fattore predittivo per lo sviluppo della patologia: più si comincia precocemente e maggiore è il rischio di dipendenza.  
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/gruppo_dei_pari_gap') { //118
+  header("Content-Type: application/json");
+  $answer = "La diffusione del gioco d’azzardo nel gruppo dei tuoi amici e il fatto che lo considerino normale, può influenzare la tua idea di gioco, per sentirti accettato e stimato potresti compiere scelte sbagliate e imitare comportamenti a rischio.
+  http://www.netyx.it/relazioni/io-e-i-miei-amici/";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/uso_di_sostanze_gap') { //119
+  header("Content-Type: application/json");
+  $answer = "Gli studi ci dicono che è stata rilevata una possibile correlazione tra il gioco d’azzardo e l’uso di sostanze.
+  Se sei un consumatore occasionale o abituale clicca il seguente link per approfondire l’argomento sulle dipendenze. 
+
+  https://www.instagram.com/educatoritrapariatsmilano/
+  https://www.facebook.com/educatoriparimilano
+
+  Se vuoi saperne di più sulle dipendenze:
+  /dipendenze
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/famiglia_gap') { //120
+  header("Content-Type: application/json");
+  $answer = "Avere famigliari o parenti che sono stati o sono giocatori d’azzardo può essere un importante fattore di rischio. 
+  Se nella tua famiglia qualcuno ha avuto o ha problemi legati al gioco, clicca qui per sapere a chi rivolgerti:
+  /gioco_azzardo_aiuto 
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
 
 //---- Altro ----//
 
