@@ -829,7 +829,7 @@ if ($text == '/rischi_del_gioco_online') { //104
 if ($text == '/caratteristiche_gioco_azzardo') { //105
   header("Content-Type: application/json");
   $answer = "
-  •	/alea – la fortuna
+•	/alea – la fortuna
   •	/scommessa – caratteristica essenziale
   •	/principali_fattori_rischio – i fattori di rischio
   •	/minimizzazione_rischio_gap – minimizzazione del rischio
