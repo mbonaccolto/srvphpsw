@@ -829,11 +829,11 @@ if ($text == '/rischi_del_gioco_online') { //104
 if ($text == '/caratteristiche_gioco_azzardo') { //105
   header("Content-Type: application/json");
   $answer = "
-  /alea – la fortuna
-  /scommessa – caratteristica essenziale
-  /principali_fattori_rischio – i fattori di rischio
-  /minimizzazione_rischio_gap – minimizzazione del rischio
-  /tipologie_di_gioco - i tipi di gioco
+  •	/alea – la fortuna
+  •	/scommessa – caratteristica essenziale
+  •	/principali_fattori_rischio – i fattori di rischio
+  •	/minimizzazione_rischio_gap – minimizzazione del rischio
+  •	/tipologie_di_gioco - i tipi di gioco
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -1004,8 +1004,8 @@ if ($text == '/famiglia_gap') { //120
 if ($text == '/conseguenze_del_gioco') { //121
   header("Content-Type: application/json");
   $answer = "Le conseguenze del gioco d’azzardo patologico possono riguardare:
-  /perdita_di_denaro – la perdita di denaro
-  /relazioni_gap – la perdita delle relazioni a cui teniamo
+  •	/perdita_di_denaro – la perdita di denaro
+  •	/relazioni_gap – la perdita delle relazioni a cui teniamo
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
