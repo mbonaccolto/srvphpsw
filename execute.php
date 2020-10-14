@@ -1057,7 +1057,7 @@ if ($text == '/normativa_gap') { //125
   header("Content-Type: application/json");
   $answer = "Su quale tipo di normativa vuoi informarti?
   Sei minorenne? Clicca qui:
-  https://socialmi.ats-milano.it/165/social/wiki/rO4LCRMYuSASBF_05102020_normativaminori.png
+  https://socialmi.ats-milano.it/165/social/wiki/QLyQ7LGOy0bg6Z_14102020_normativaminorenni.png
 
   Sei maggiorenne? Clicca qui:
   https://socialmi.ats-milano.it/165/social/wiki/UelDlCrAxkBSaL_05102020_normativamaggiorenni.png
