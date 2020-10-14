@@ -784,7 +784,7 @@ if ($text == '/gioco_azzardo') { //101
   $answer = "Scegli un argomento specifico tra quelli proposti:
     •	/gioco_azzardo_definizione
     •	/gioco_azzardo_online_definizione
-    •	/rischi_del_gioco_online
+    •	/rischi_gioco_online
     •	/caratteristiche_gioco_azzardo
     •	/soggetti_gioco_azzardo
     •	/conseguenze_del_gioco
@@ -817,9 +817,13 @@ if ($text == '/gioco_azzardo_online_definizione') { //103
   echo json_encode($parameters);
 }
 
-if ($text == '/rischi_del_gioco_online') { //104
+if ($text == '/rischi_gioco_online') { //104
   header("Content-Type: application/json");
-  $answer = "Rischio del gioco online:
+  $answer = "Puoi accedere al gioco on line, in ogni momento della giornata. 
+  Basta avere uno smartphone e una connessione dati. 
+  Fai attenzione ai rischi connessi al gioco on line che ti vengono indicati nell'immagine. 
+  Non dimenticarti che spesso dietro i siti si nascondono gli interessi della criminalità organizzata.
+ 
   https://socialmi.ats-milano.it/165/social/wiki/xuZdttPfEE22gI_05102020_rischiogiocoonline.png";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
