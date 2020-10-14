@@ -950,7 +950,7 @@ if ($text == '/principali_fattori_rischio') { //116
   $answer = "Quali dei seguenti argomenti sui fattori di rischio vuoi approfondire?
   •	/eta_gap - fattori di rischi legato all'età
   •	/gruppo_dei_pari_gap - fattori di rischi legato al gruppo dei pari
-  •	/uso_di_sostanze_gap - correlazione tra il gioco d’azzardo e l’uso di sostanze
+  •	/uso_sostanze_gap - correlazione tra il gioco d’azzardo e l’uso di sostanze
   •	/famiglia_gap - famigliari o parenti che sono stati o sono giocatori d’azzardo
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
@@ -977,13 +977,10 @@ if ($text == '/gruppo_dei_pari_gap') { //118
   echo json_encode($parameters);
 }
 
-if ($text == '/uso_di_sostanze_gap') { //119
+if ($text == '/uso_sostanze_gap') { //119
   header("Content-Type: application/json");
   $answer = "Gli studi ci dicono che è stata rilevata una possibile correlazione tra il gioco d’azzardo e l’uso di sostanze.
   Se sei un consumatore occasionale o abituale clicca il seguente link per approfondire l’argomento sulle dipendenze. 
-
-•	https://www.instagram.com/educatoritrapariatsmilano/
-•	https://www.facebook.com/educatoriparimilano/
 
   Se vuoi saperne di più sulle dipendenze:
   /dipendenze
