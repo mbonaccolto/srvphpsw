@@ -835,8 +835,8 @@ if ($text == '/caratteristiche_gioco_azzardo') { //105
   $answer = "
 •	/alea – la fortuna
   •	/scommessa – caratteristica essenziale
-  •	/principali_fattori_rischio – i fattori di rischio
   •	/minimizzazione_rischio_gap – minimizzazione del rischio
+  •	/principali_fattori_rischio – i fattori di rischio
   •	/tipologie_di_gioco - i tipi di gioco
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
@@ -910,7 +910,7 @@ if ($text == '/gioco_patologico') { //112
 
 if ($text == '/soggetti_gioco_azzardo') { //113
   header("Content-Type: application/json");
-  $answer = "Ogni età ha conseguenze diverse. Per approfondire, clicca sulla fascia d’età ti rappresenta. 
+  $answer = "Ogni età ha conseguenze diverse. Per approfondire, clicca sulla fascia d’età che ti rappresenta. 
   •	/adolescenti_gap
   •	/popolazione_generale_gap";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
@@ -982,8 +982,8 @@ if ($text == '/uso_di_sostanze_gap') { //119
   $answer = "Gli studi ci dicono che è stata rilevata una possibile correlazione tra il gioco d’azzardo e l’uso di sostanze.
   Se sei un consumatore occasionale o abituale clicca il seguente link per approfondire l’argomento sulle dipendenze. 
 
-  https://www.instagram.com/educatoritrapariatsmilano/
-  https://www.facebook.com/educatoriparimilano
+•	https://www.instagram.com/educatoritrapariatsmilano/
+•	https://www.facebook.com/educatoriparimilano/
 
   Se vuoi saperne di più sulle dipendenze:
   /dipendenze
