@@ -1045,7 +1045,7 @@ if ($text == '/perdita_di_denaro') { //123
 
 if ($text == '/gioco_azzardo_aiuto') { //124
   header("Content-Type: application/json");
-  $answer = "Scarica il file pdf allegato per trovare i riferimenti utili:
+  $answer = "Per capire come posso cambiare e cambiare gli altri, scarica il file pdf allegato:
   https://socialmi.ats-milano.it/165/social/wiki/AUCkcAEgZyOBcf_05102020_aiutogap.pdf
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
