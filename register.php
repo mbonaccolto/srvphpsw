@@ -2,7 +2,7 @@
 
 // PARAMETRI DA MODIFICARE
 $WEBHOOK_URL = 'https://atsmilanocovid19.herokuapp.com/execute.php';
-$BOT_TOKEN = '1439636326:AAHjznqKfNpuoXdCdWDFUfqoEEIL2zgrQso';
+$BOT_TOKEN = '1336879767:AAFSLS5ZfXT3aIhy64eAsXu91lY6rBKZDhE';
 
 // NON APPORTARE MODIFICHE NEL CODICE SEGUENTE
 $API_URL = 'https://api.telegram.org/bot' . $BOT_TOKEN .'/';
