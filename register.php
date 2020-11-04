@@ -15,3 +15,4 @@ curl_setopt($handle, CURLOPT_CONNECTTIMEOUT, 5);
 curl_setopt($handle, CURLOPT_TIMEOUT, 60);
 $result = curl_exec($handle);
 print_r($result);
+?>
