@@ -34,11 +34,11 @@ if ($text == '/covid') {
 /alunni_operatori_negativi - se negativi
 /contatto_stretto - cosa fare se si è contatto stretto
 /problema_salute_no_Covid 
-/compagni_classe_alunno_ positivo
+/compagni_classe_alunno_positivo
 /numero_elevato_di_assenze
 /referente_covid
 /a_chi_rivolgersi
-/informazioni_ corrette";
+/informazioni_corrette";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
