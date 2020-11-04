@@ -33,12 +33,12 @@ if ($text == '/covid') { // 1
 /alunni_operatori_positivi - se positivi
 /alunni_operatori_negativi - se negativi
 /contatto_stretto - cosa fare se si è contatto stretto
-/problema_salute_no_covid 
-/compagni_classe_alunno_positivo
-/numero_elevato_di_assenze
-/referente_covid
-/a_chi_rivolgersi
-/informazioni_corrette";
+/problema_salute_no_covid - se non è covid
+/compagni_classe_alunno_positivo - cosa fare se alunno positivo
+/numero_elevato_di_assenze - cosa succede se le assenze sono numerose
+/referente_covid - chi è il referente Covid
+/a_chi_rivolgersi - contatti utili
+/informazioni_corrette - collegamenti e informazioni generali";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
