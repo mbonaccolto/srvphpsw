@@ -185,7 +185,7 @@ L’attestazione di guarigione è rilasciata dal Pediatra o Medico curante.
   echo json_encode($parameters);
 }
 
-if ($text == '/alunni_operatori_nagativi') { // 13
+if ($text == '/alunni_operatori_negativi') { // 13
   header("Content-Type: application/json");
   $answer = "Dopo valutazione del pediatra o medico curante, l’alunno potrà riprendere la frequenza scolastica dietro presentazione di attestazione medica.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
