@@ -261,7 +261,7 @@ if ($text == '/formazione_referente_covid') { // 20
 
 if ($text == '/a_chi_rivolgersi') { // 21
   header("Content-Type: application/json");
-  $answer = "Il Ministero dell’Istruzione ha attivato un help desk. Le scuole potranno chiamare il numero verde 800.90.30.80 dal lunedì al sabato, dalle 9:00 alle 13:00 e dalle 14:00 alle 18:00. 
+  $answer = "Il Ministero dell’Istruzione ha attivato un help desk. Le scuole potranno chiamare il numero verde 800903080 dal lunedì al sabato, dalle 9:00 alle 13:00 e dalle 14:00 alle 18:00. 
 Il servizio raccoglie quesiti e segnalazioni sull’applicazione delle misure di sicurezza e fornisce alle istituzioni scolastiche assistenza e supporto operativo anche di carattere amministrativo.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
