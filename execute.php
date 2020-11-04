@@ -252,7 +252,7 @@ if ($text == '/chi_e_il_referente_covid') { // 19
 
 if ($text == '/formazione_referente_covid') { // 20
   header("Content-Type: application/json");
-  $answer = "Il percorso formativo sarà erogato tramite Formazione A Distanza (FAD) sulla piattaforma EDUISS dell’Istituto Superiore di Sanità e sarà fruibile in modalità asincrona nel periodo 28 agosto /31 dicembre 2020.";
+  $answer = "Il percorso formativo sarà erogato tramite Formazione A Distanza (FAD) sulla piattaforma EDUISS dell’Istituto Superiore di Sanità e sarà fruibile in modalità asincrona nel periodo dal 28 agosto al 31 dicembre 2020.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
