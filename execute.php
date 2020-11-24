@@ -119,7 +119,7 @@ if ($text == '/covid_popolazione_generale') { // 6
 if ($text == '/sintomi_sospetti_scuola') { // 7
   header("Content-Type: application/json");
   $answer = "Scarica il file pdf per avere tutte le informazioni utili:
-https://socialmi.ats-milano.it/165/social/wiki/iGWreCq3j6Wmnw_14102020_sintomisospetticovidascuola.pdf
+http://www.stopalbullismo.it/wiki/iGWreCq3j6Wmnw_14102020_sintomisospetticovidascuola.pdf
 ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -165,7 +165,7 @@ divieto di spostamenti o viaggio e l’obbligo di rimanere raggiungibile per le 
 if ($text == '/accesso_ai_punti_tampone') { // 11
   header("Content-Type: application/json");
   $answer = "Scarica il file per l'elenco aggiornato dei punti di accesso:
-https://socialmi.ats-milano.it/165/social/wiki/nH4iBgzheoREVA_14102020_accessoaipuntitampone.pdf
+http://www.stopalbullismo.it/wiki/nH4iBgzheoREVA_14102020_accessoaipuntitampone.pdf
 ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -271,7 +271,7 @@ Il servizio raccoglie quesiti e segnalazioni sull’applicazione delle misure di
 if ($text == '/informazioni_corrette') { // 22
   header("Content-Type: application/json");
   $answer = "Per ulteriori informazioni, scarica il seguente file pdf:
-https://socialmi.ats-milano.it/165/social/wiki/oGeJhCCk0TIPMm_14102020_informazionicorrette.pdf
+http://www.stopalbullismo.it/wiki/oGeJhCCk0TIPMm_14102020_informazionicorrette.pdf
 ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
