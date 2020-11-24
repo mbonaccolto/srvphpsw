@@ -79,7 +79,7 @@ if ($text == '/minorenne') { //05
 if ($text == '/consultori') { //06
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-  https://socialmi.ats-milano.it/165/social/wiki/07WMVsTuPFJs5i_16012020_consultori.pdf";
+  http://www.stopalbullismo.it/wiki/07WMVsTuPFJs5i_16012020_consultori.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -149,7 +149,7 @@ if ($text == '/definizione') { //12
   $answer = "Puoi trovare una difinizione a questo link:
   http://www.netyx.it/sesso/sessualita/
   Oppure scarica questo file:
-  https://socialmi.ats-milano.it/165/social/wiki/heXhZa47tqBmF9_21112019_DEFINIZIONE.pdf";
+  http://www.stopalbullismo.it/wiki/heXhZa47tqBmF9_21112019_DEFINIZIONE.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -178,10 +178,10 @@ if ($text == '/partner') { //14
 if ($text == '/orientamento') { //15
   header("Content-Type: application/json");
   $answer = "Prova a scaricare questo file:
-https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf
+http://www.stopalbullismo.it/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf
   
 Se ti va guarda anche questo video: 
-https://socialmi.ats-milano.it/165/social/wiki/IiKey79Uc3gt3U_23012020_videoplayback.mp4";
+http://www.stopalbullismo.it/wiki/IiKey79Uc3gt3U_23012020_videoplayback.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -203,7 +203,7 @@ http://www.netyx.it/questo-e-amore/
 http://www.netyx.it/lamore-e-rispetto/
 Mi raccomando, amare bene significa anche conoscere il significato di violenza. 
 Forse questo video potrebbe aiutarti: 
-https://socialmi.ats-milano.it/165/social/wiki/o8tW1vR30x9nTZ_23012020_videoplayback.mp4";
+http://www.stopalbullismo.it/wiki/o8tW1vR30x9nTZ_23012020_videoplayback.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -223,7 +223,7 @@ if ($text == '/nonmipiaccio') { //19
   $answer = "Guarda questo link:
   http://www.netyx.it/mi-piaccio-io-e-il-mio-corpo/quando-non-mi-piaccio/
   Potrebbe piacerti anche questo:
-  https://socialmi.ats-milano.it/165/social/wiki/p49tj14Cv6yueA_21112019_poesiacarloporta.pdf";
+  http://www.stopalbullismo.it/wiki/p49tj14Cv6yueA_21112019_poesiacarloporta.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -261,11 +261,11 @@ if ($text == '/identitadigenere') { //23
   header("Content-Type: application/json");
   $answer = "
 Dai un’occhiata a questo file, ti chiarirà le idee sul significato di identità di genere: 
-https://socialmi.ats-milano.it/165/social/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf
+http://www.stopalbullismo.it/wiki/p69mZJ2zqu9otl_21112019_genereorientamento.pdf
 
 Ti consiglio anche di guardare questi video: 
-https://socialmi.ats-milano.it/165/social/wiki/hJ3HBsHQzH8kZe_23012020_videoplayback.mp4
-https://socialmi.ats-milano.it/165/social/wiki/IiKey79Uc3gt3U_23012020_videoplayback.mp4
+http://www.stopalbullismo.it/wiki/hJ3HBsHQzH8kZe_23012020_videoplayback.mp4
+http://www.stopalbullismo.it/wiki/IiKey79Uc3gt3U_23012020_videoplayback.mp4
 ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -333,7 +333,7 @@ if ($text == '/comedarepiacere') { //29
 if ($text == '/piaceremaschile') { //30
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-https://socialmi.ats-milano.it/165/social/wiki/C5BCxoXmoYVwis_21112019_comedarepiaceremaschile.pdf";
+http://www.stopalbullismo.it/wiki/C5BCxoXmoYVwis_21112019_comedarepiaceremaschile.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -342,7 +342,7 @@ https://socialmi.ats-milano.it/165/social/wiki/C5BCxoXmoYVwis_21112019_comedarep
 if ($text == '/piacerefemminile') { //31
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-https://socialmi.ats-milano.it/165/social/wiki/ep2vQSije6abBk_21112019_comedarepiacerefemminile.pdf";
+http://www.stopalbullismo.it/wiki/ep2vQSije6abBk_21112019_comedarepiacerefemminile.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -378,9 +378,9 @@ if ($text == '/approfondimento_sostanze') { //41
 if ($text == '/definizione_sostanze') { //42
   header("Content-Type: application/json");
   $answer = "Scarica questo file se vuoi conoscere la definizione di sostanze psicoattive:
-https://socialmi.ats-milano.it/165/social/wiki/MYhriSoTZvZQ5q_06122019_definizionesostanzepsicoattive.pdf
+http://www.stopalbullismo.it/wiki/MYhriSoTZvZQ5q_06122019_definizionesostanzepsicoattive.pdf
 E se ti va, guarda questo video:
-https://socialmi.ats-milano.it/165/social/wiki/xW4SrbgPX3eAXc_29102019_Nuggets.mp4";
+http://www.stopalbullismo.it/wiki/xW4SrbgPX3eAXc_29102019_Nuggets.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -389,7 +389,7 @@ https://socialmi.ats-milano.it/165/social/wiki/xW4SrbgPX3eAXc_29102019_Nuggets.m
 if ($text == '/usoabuso') { //43
   header("Content-Type: application/json");
   $answer = "Scarica questo file se vuoi sapere se stai solo usando, stai abusando o sei dipendente da una sostanza:
-https://socialmi.ats-milano.it/165/social/wiki/3K03VzW32fhfdw_06122019_usoabusodipendenzatolleranzaastinenzaoverdose.pdf";
+http://www.stopalbullismo.it/wiki/3K03VzW32fhfdw_06122019_usoabusodipendenzatolleranzaastinenzaoverdose.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -398,7 +398,7 @@ https://socialmi.ats-milano.it/165/social/wiki/3K03VzW32fhfdw_06122019_usoabusod
 if ($text == '/qualisono') { //44
   header("Content-Type: application/json");
   $answer = "Ecco per te una lista e una descrizione delle sostanze psicoattive:
-https://socialmi.ats-milano.it/165/social/wiki/WcQlsBlRGXee33_06122019_cerchiosostanzepsicoattive.pdf";
+http://www.stopalbullismo.it/wiki/WcQlsBlRGXee33_06122019_cerchiosostanzepsicoattive.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -431,11 +431,11 @@ if ($text == '/sostanze_legali') { //46
 if ($text == '/alcol') { //47
   header("Content-Type: application/json");
   $answer = "Potrebbero interessarti questi file: 
-https://socialmi.ats-milano.it/165/social/wiki/02z36t3mEFYy5S_06122019_alcolapprofondimento.pdf
-https://socialmi.ats-milano.it/165/social/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf
+http://www.stopalbullismo.it/wiki/02z36t3mEFYy5S_06122019_alcolapprofondimento.pdf
+http://www.stopalbullismo.it/wiki/81ti7R1HozPbBG_06122019_RISCHIALCOL.pdf
 
 E questo video che in pochi minuti ti spiega tutto quello che devi sapere sull'alcol: 
-https://socialmi.ats-milano.it/165/social/wiki/eOiyrKw182icnx_20012020_TUTTOQUELLOCHEDEVISAPERESULLALCOL.mp4";
+http://www.stopalbullismo.it/wiki/eOiyrKw182icnx_20012020_TUTTOQUELLOCHEDEVISAPERESULLALCOL.mp4";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -444,11 +444,11 @@ https://socialmi.ats-milano.it/165/social/wiki/eOiyrKw182icnx_20012020_TUTTOQUEL
 if ($text == '/tabacco') { //48
   header("Content-Type: application/json");
   $answer = "Potrebbero interessarti questi file: 
-https://socialmi.ats-milano.it/165/social/wiki/MQEP1Ids56Gwf3_06122019_Fumoditabaccoapprofondimento.pdf
-https://socialmi.ats-milano.it/165/social/wiki/KcLKnSShulQ3XV_06122019_RISCHITABACCO.pdf
+http://www.stopalbullismo.it/wiki/MQEP1Ids56Gwf3_06122019_Fumoditabaccoapprofondimento.pdf
+http://www.stopalbullismo.it/wiki/KcLKnSShulQ3XV_06122019_RISCHITABACCO.pdf
 
 Se ti va, guarda anche questo video sul “perché non riesci a smettere di fumare”: 
-https://socialmi.ats-milano.it/165/social/wiki/xcuiVvCK6ifJOe_20012020_PERCHNONRIESCIASMETTEREDIFUMARE.mp4
+http://www.stopalbullismo.it/wiki/xcuiVvCK6ifJOe_20012020_PERCHNONRIESCIASMETTEREDIFUMARE.mp4
 ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -458,7 +458,7 @@ https://socialmi.ats-milano.it/165/social/wiki/xcuiVvCK6ifJOe_20012020_PERCHNONR
 if ($text == '/sigaretta_elettronica') { //49
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file: 
-https://socialmi.ats-milano.it/165/social/wiki/znmQ2icBesT09l_06122019_Sigarettaelettronicaapprofondimento.pdf";
+http://www.stopalbullismo.it/wiki/znmQ2icBesT09l_06122019_Sigarettaelettronicaapprofondimento.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -481,7 +481,7 @@ if ($text == '/sostanze_illegali') { //50
 if ($text == '/cannabis') { //51
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/x8sD4f3wDWVZDh_06122019_RISCHICANNABIS.pdf";
+http://www.stopalbullismo.it/wiki/x8sD4f3wDWVZDh_06122019_RISCHICANNABIS.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -490,7 +490,7 @@ https://socialmi.ats-milano.it/165/social/wiki/x8sD4f3wDWVZDh_06122019_RISCHICAN
 if ($text == '/cocaina') { //52
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/rRHDBXCQq0B4gs_06122019_RISCHICOCAINA.pdf";
+http://www.stopalbullismo.it/wiki/rRHDBXCQq0B4gs_06122019_RISCHICOCAINA.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -499,7 +499,7 @@ https://socialmi.ats-milano.it/165/social/wiki/rRHDBXCQq0B4gs_06122019_RISCHICOC
 if ($text == '/metamfetamine') { //53
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/lSMkIIjpbPG8M4_06122019_RISCHIECSTASY.pdf";
+http://www.stopalbullismo.it/wiki/lSMkIIjpbPG8M4_06122019_RISCHIECSTASY.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -508,7 +508,7 @@ https://socialmi.ats-milano.it/165/social/wiki/lSMkIIjpbPG8M4_06122019_RISCHIECS
 if ($text == '/eroina') { //54
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/w4xQXeL6noWHLF_06122019_RISCHIEROINA.pdf";
+http://www.stopalbullismo.it/wiki/w4xQXeL6noWHLF_06122019_RISCHIEROINA.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -517,7 +517,7 @@ https://socialmi.ats-milano.it/165/social/wiki/w4xQXeL6noWHLF_06122019_RISCHIERO
 if ($text == '/ketamina') { //55
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/wH4QEQcbqOm0EI_06122019_RISCHIKETAMINA.pdf";
+http://www.stopalbullismo.it/wiki/wH4QEQcbqOm0EI_06122019_RISCHIKETAMINA.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -526,7 +526,7 @@ https://socialmi.ats-milano.it/165/social/wiki/wH4QEQcbqOm0EI_06122019_RISCHIKET
 if ($text == '/lsd') { //56
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/4mv5h9yGjAxqWF_06122019_RISCHILSD.pdf";
+http://www.stopalbullismo.it/wiki/4mv5h9yGjAxqWF_06122019_RISCHILSD.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -535,7 +535,7 @@ https://socialmi.ats-milano.it/165/social/wiki/4mv5h9yGjAxqWF_06122019_RISCHILSD
 if ($text == '/leggi') { //57
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/Y2Q9siveTxwHAl_06122019_normativa.pdf";
+http://www.stopalbullismo.it/wiki/Y2Q9siveTxwHAl_06122019_normativa.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -544,7 +544,7 @@ https://socialmi.ats-milano.it/165/social/wiki/Y2Q9siveTxwHAl_06122019_normativa
 if ($text == '/testimonianze') { //58
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/CEktIcM8h7xmbe_06122019_testimonianzesostanze.pdf";
+http://www.stopalbullismo.it/wiki/CEktIcM8h7xmbe_06122019_testimonianzesostanze.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -553,7 +553,7 @@ https://socialmi.ats-milano.it/165/social/wiki/CEktIcM8h7xmbe_06122019_testimoni
 if ($text == '/sostanze_aiuto') { //59
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidipendenze.pdf";
+http://www.stopalbullismo.it/wiki/TlqAGIk2BqGW9z_06122019_servizidipendenze.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -575,7 +575,7 @@ if ($text == '/gioco_azzardo') { //60
 if ($text == '/approfondimento_ga') { //61
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/mzjLLIOrqtesTb_06122019_giocodazzardoapprofondimento.pdf";
+http://www.stopalbullismo.it/wiki/mzjLLIOrqtesTb_06122019_giocodazzardoapprofondimento.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -584,7 +584,7 @@ https://socialmi.ats-milano.it/165/social/wiki/mzjLLIOrqtesTb_06122019_giocodazz
 if ($text == '/testimonianza_ga') { //62
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/sX7tWdDeYhq79a_06122019_testimonianzagiocoazzardo.pdf";
+http://www.stopalbullismo.it/wiki/sX7tWdDeYhq79a_06122019_testimonianzagiocoazzardo.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -593,7 +593,7 @@ https://socialmi.ats-milano.it/165/social/wiki/sX7tWdDeYhq79a_06122019_testimoni
 if ($text == '/aiuto_ga') { //63
   header("Content-Type: application/json");
   $answer = "Potrebbe interessarti questo file:
-https://socialmi.ats-milano.it/165/social/wiki/TlqAGIk2BqGW9z_06122019_servizidipendenze.pdf";
+http://www.stopalbullismo.it/wiki/TlqAGIk2BqGW9z_06122019_servizidipendenze.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -634,7 +634,7 @@ if ($text == '/approfondimento_bullismo') { //81
 if ($text == '/caratteristiche') { //82
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-https://socialmi.ats-milano.it/165/social/wiki/e9PzznmQ2icBes_20012020_caratteristichebullismo.pdf";
+http://www.stopalbullismo.it/wiki/e9PzznmQ2icBes_20012020_caratteristichebullismo.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -643,7 +643,7 @@ https://socialmi.ats-milano.it/165/social/wiki/e9PzznmQ2icBes_20012020_caratteri
 if ($text == '/tipologie') { //83
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-https://socialmi.ats-milano.it/165/social/wiki/T09lS4PKA8j3hO_20012020_tipidibullismo.pdf";
+http://www.stopalbullismo.it/wiki/T09lS4PKA8j3hO_20012020_tipidibullismo.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -652,7 +652,7 @@ https://socialmi.ats-milano.it/165/social/wiki/T09lS4PKA8j3hO_20012020_tipidibul
 if ($text == '/attori') { //84
   header("Content-Type: application/json");
   $answer = "Scarica il file:
-https://socialmi.ats-milano.it/165/social/wiki/dpeREPQ0PMODJb_20012020_attori.pdf";
+http://www.stopalbullismo.it/wiki/dpeREPQ0PMODJb_20012020_attori.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -663,7 +663,7 @@ if ($text == '/hosubito') { //85
   $answer = "Non ti preoccupare, il bullismo è un fenomeno diffuso che riguarda oltre il 10% della popolazione studentesca. 
 Questo non toglie il fatto che tu debba comunque essere aiutato.
 Troverai delle informazioni utili a questo link:
-https://socialmi.ats-milano.it/165/social/wiki/6EjBlkDm1kqUpr_20012020_hosubito.pdf";
+http://www.stopalbullismo.it/wiki/6EjBlkDm1kqUpr_20012020_hosubito.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -678,7 +678,7 @@ Devi sapere che adesso hai a disposizione quattro strategie:
 -contrastare il bullo: /contrastobullo
 -chiedere aiuto: /aiuto
 In più, troverai delle informazioni utili a questo link:
-https://socialmi.ats-milano.it/165/social/wiki/zueZXK5tAKe3GM_20012020_hoassistito.pdf";
+http://www.stopalbullismo.it/wiki/zueZXK5tAKe3GM_20012020_hoassistito.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -689,10 +689,10 @@ if ($text == '/aiuto') { //87
   $answer = "Puoi iniziare a parlarne con un adulto di tua fiducia o puoi rivolgerti a uno psicologo che potrai trovare a scuola oppure in un servizio pubblico. In questi servizi, come i consultori familiari e i centri dell’infanzia e dell’adolescenza, troverai un aiuto specializzato nel rispetto della tua privacy. 
 Scarica il materiale informativo per visualizzare i contatti:
 - elenco dei consultori: 
-https://socialmi.ats-milano.it/165/social/wiki/07WMVsTuPFJs5i_16012020_consultori.pdf
+http://www.stopalbullismo.it/wiki/07WMVsTuPFJs5i_16012020_consultori.pdf
 
 - modulo per il cyberbullismo: 
-https://socialmi.ats-milano.it/165/social/wiki/sHXK5VTZ8l9KkQ_15012020_I9rCzEJy3plg5e24012018Modelloperlasegnalazionereclamoinmateriadicyberbullismo.pdf";
+http://www.stopalbullismo.it/wiki/sHXK5VTZ8l9KkQ_15012020_I9rCzEJy3plg5e24012018Modelloperlasegnalazionereclamoinmateriadicyberbullismo.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -701,7 +701,7 @@ https://socialmi.ats-milano.it/165/social/wiki/sHXK5VTZ8l9KkQ_15012020_I9rCzEJy3
 if ($text == '/legge') { //88
   header("Content-Type: application/json");
   $answer = "Ricordati che c’è una legge specifica che contrasta bullismo e cyberbullismo. 
-https://socialmi.ats-milano.it/165/social/wiki/vzRiRuRfXm6VlJ_15012020_LEGGE71.pdf";
+http://www.stopalbullismo.it/wiki/vzRiRuRfXm6VlJ_15012020_LEGGE71.pdf";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -824,7 +824,7 @@ if ($text == '/rischi_gioco_online') { //104
   Fai attenzione ai rischi connessi al gioco on line che ti vengono indicati nell'immagine. 
   Non dimenticarti che spesso dietro i siti si nascondono gli interessi della criminalità organizzata.
  
-  https://socialmi.ats-milano.it/165/social/wiki/xuZdttPfEE22gI_05102020_rischiogiocoonline.png";
+  http://www.stopalbullismo.it/wiki/xuZdttPfEE22gI_05102020_rischiogiocoonline.png";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -882,7 +882,7 @@ if ($text == '/tipologie_di_gioco') { //109
 if ($text == '/gioco_informale_ricreativo') { //110
   header("Content-Type: application/json");
   $answer = "Gioco informale ricreativo:
-  https://socialmi.ats-milano.it/165/social/wiki/sG0PgKUghL4Mcd_05102020_GiocoRicreativofine.jpg";
+  http://www.stopalbullismo.it/wiki/sG0PgKUghL4Mcd_05102020_GiocoRicreativofine.jpg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -892,7 +892,7 @@ if ($text == '/gioco_informale_ricreativo') { //110
 if ($text == '/gioco_problematico') { //111
   header("Content-Type: application/json");
   $answer = "Gioco problematico:
-  https://socialmi.ats-milano.it/165/social/wiki/k92OSw8znUTmLV_05102020_GiocoProblematicofine.jpg";
+  http://www.stopalbullismo.it/wiki/k92OSw8znUTmLV_05102020_GiocoProblematicofine.jpg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -902,7 +902,7 @@ if ($text == '/gioco_problematico') { //111
 if ($text == '/gioco_patologico') { //112
   header("Content-Type: application/json");
   $answer = "Gioco patologico:
-  https://socialmi.ats-milano.it/165/social/wiki/fxziEVMXgMavK0_05102020_GiocoPatologicofine.jpg";
+  http://www.stopalbullismo.it/wiki/fxziEVMXgMavK0_05102020_GiocoPatologicofine.jpg";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -1043,7 +1043,7 @@ if ($text == '/perdita_di_denaro') { //123
 if ($text == '/gioco_azzardo_aiuto') { //124
   header("Content-Type: application/json");
   $answer = "Per capire come posso cambiare e cambiare gli altri, scarica il file pdf allegato:
-  https://socialmi.ats-milano.it/165/social/wiki/AUCkcAEgZyOBcf_05102020_aiutogap.pdf
+  http://www.stopalbullismo.it/wiki/AUCkcAEgZyOBcf_05102020_aiutogap.pdf
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
@@ -1054,10 +1054,10 @@ if ($text == '/normativa_gap') { //125
   header("Content-Type: application/json");
   $answer = "Su quale tipo di normativa vuoi informarti?
   Sei minorenne? Clicca qui:
-  https://socialmi.ats-milano.it/165/social/wiki/QLyQ7LGOy0bg6Z_14102020_normativaminorenni.png
+  http://www.stopalbullismo.it/wiki/QLyQ7LGOy0bg6Z_14102020_normativaminorenni.png
 
   Sei maggiorenne? Clicca qui:
-  https://socialmi.ats-milano.it/165/social/wiki/UelDlCrAxkBSaL_05102020_normativamaggiorenni.png
+  http://www.stopalbullismo.it/wiki/UelDlCrAxkBSaL_05102020_normativamaggiorenni.png
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
