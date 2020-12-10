@@ -1129,6 +1129,186 @@ http://www.salute.gov.it/nuovocoronavirus";
   echo json_encode($parameters);
 }
 
+if ($text == '/rischi_covid') { //206
+  header("Content-Type: application/json");
+  $answer = "•	vivo nella stessa casa di un caso COVID-19 
+•	 ho avuto un contatto fisico diretto con un caso COVID-19 (per esempio la stretta di mano) 
+•	ho avuto un contatto diretto (faccia a faccia) con un caso COVID-19, a distanza ravvicinata e per almeno 15 minuti 
+•	sono stato/a in un ambiente chiuso  con un caso COVID-19 e non ho osservato le norme di prevenzione
+ 
+Se vuoi saperne di più guarda la pagina del Ministero della Salute dedicata al Coronavirus: 
+http://www.salute.gov.it/nuovocoronavirus 
+";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/comportamenti_covid') { //207
+  header("Content-Type: application/json");
+  $answer = "/come_ proteggersi_covid – come ridurre il rischio di infezione
+/lavare_le_mani – come lavare le mani
+/indossare_ la_ mascherina – come indossare correttamente la mascherina
+/comportamenti_ corretti_covid  - comportamenti corretti sui mezzi_ di_ trasporto.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/come_proteggersi_covid') { //208
+  header("Content-Type: application/json");
+  $answer = "È possibile ridurre il rischio di infezione, proteggendo se stessi e gli altri, seguendo alcuni accorgimenti: 
+PROTEGGI TE STESSO
+Lavati spesso le mani : 
+•	dove aver tossito o starnutito
+•	prima di mangiare
+•	dopo essere andati in bagno 
+igenizza spesso le mani :
+•	a scuola 
+•	dopo aver preso i mezzi pubblici
+•	se vieni  a contatto con materiale di altri. 
+
+
+PROTEGGI GLI ALTRI 
+•	Se hai una qualsiasi infezione respiratoria copri naso e bocca quando tossisci e/o starnutisci (gomito interno/fazzoletto). 
+•	Se hai usato un fazzoletto buttalo dopo l’uso. 
+•	Lavati le mani dopo aver tossito/starnutito. 
+
+Guarda questo breve video sulle regole da seguire : 
+https://www.youtube.com/watch?v=2N1xX155NNg
+";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/lavare_le_mani') { //209
+  header("Content-Type: application/json");
+  $answer = "Apri il file:
+http://www.stopalbullismo.it/wiki/a9xYBInUrspmCd_06102020_comelavarelemani.pdf
+
+Guarda questo breve video su come lavare correttamente le mani:
+https://www.youtube.com/watch?v=gh9X4ENh6bE&ab_channel=LaRepubblica 
+Clicca sul link per avere ulteriori informazioni:
+http://www.stopalbullismo.it/wiki/Am2A2OqeuU5aXR_06102020_lavaggiodellemani.pdf
+";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/indossare_ la_ mascherina') { //210
+  header("Content-Type: application/json");
+  $answer = "Apri immagine
+http://www.stopalbullismo.it/wiki/ivxov4sGIkeU4m_06102020_comesiindossalamascherina.pdf
+
+Guarda questo breve video per imparare a utilizzare correttamente la mascherina 
+https://www.youtube.com/watch?v=FxBEieinmzc&ab_channel=wikiHow";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/comportamenti_corretti_covid') { //211
+  header("Content-Type: application/json");
+  $answer = "Apri il file:
+http://www.stopalbullismo.it/wiki/D2xW439pB6P00G_06102020_comportamenticorrettisuimezziditrasporto.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/scuola_ in_ sicurezza') { //212
+  header("Content-Type: application/json");
+  $answer = "/buone_pratiche_covid – buone pratiche per una scuola in sicurezza
+/misurare_temperatura – misurare la temperatura a casa
+/rientro_scuola – rientro a scuola dopo risultato positivo al tampone
+/persone_fragili – attenzione alle persone più fragili
+/aiuto_sintomi_covid – a chi rivolgersi in caso di sintomi";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/buone_pratiche_covid') { //213
+  header("Content-Type: application/json");
+  $answer = "E’ fondamentale rispettare le cinque regole per la riapertura e lo svolgimento delle attività della scuola in sicurezza: 
+http://www.stopalbullismo.it/wiki/0GiL3A1AFBt6If_06102020_buoneregoleascuola.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/misurare_temperatura') { //214
+  header("Content-Type: application/json");
+  $answer = "Misurare a casa la temperatura corporea prima di recarsi a scuola è una regola importante per tutelare la propria salute e quella degli altri. Consente di prevenire la possibile diffusione del contagio nel tragitto casa-scuola, sui mezzi di trasporto utilizzati, quando si attende di entrare a scuola, o in classe.";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/rientro_scuola') { //215
+  header("Content-Type: application/json");
+  $answer = "Rientrerai a scuola dopo aver effettuato due tamponi ed entrambi saranno risultati negativi.
+RICORDATI fino a quando non avrai ricevuto l’esito del tampone, rimani a casa! 
+
+Se vuoi saperne di più guarda la pagina del Ministero della Salute dedicata al Coronavirus: 
+http://www.salute.gov.it/nuovocoronavirus";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/persone_fragili') { //216
+  header("Content-Type: application/json");
+  $answer = "Rientrerai a scuola dopo aver effettuato due tamponi ed entrambi saranno risultati negativi.
+RICORDATI fino a quando non avrai ricevuto l’esito del tampone, rimani a casa! 
+Se vuoi saperne di più guarda la pagina del Ministero della Salute dedicata al Coronavirus: 
+http://www.salute.gov.it/nuovocoronavirus";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/aiuto_sintomi_covid') { //217
+  header("Content-Type: application/json");
+  $answer = "In caso di sintomi o dubbi, rimani in casa, non recarti al pronto soccorso o presso gli studi medici ma chiama al telefono il tuo medico di famiglia, il tuo pediatra o la guardia medica. Oppure chiama il numero verde regionale., 
+•	Numero verde Regione Lombardia: 8004545   
+•	Numero di pubblica utilità: 1500";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/falsi_miti_sul_virus_covid') { //218
+  header("Content-Type: application/json");
+  $answer = "Alcuni miti da sfatare:
+  http://www.stopalbullismo.it/wiki/uwXAQxAt6ux1j7_06102020_FALSIMITISULVIRUS.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/informazioni_corrette_covid') { //219
+  header("Content-Type: application/json");
+  $answer = "Scarica il file:
+  http://www.stopalbullismo.it/wiki/vhg2Xo11mF4Rfb_06102020_informazionicorrette.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/benessere_visivo') { //220
+  header("Content-Type: application/json");
+  $answer = "La DAD affatica la vista.
+Scarica il file pdf con i link ai video per la ginnastica visiva.
+http://www.stopalbullismo.it/wiki/igiene_visiva.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
 
 //---- Altro ----//
 
