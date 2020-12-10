@@ -1149,7 +1149,7 @@ if ($text == '/comportamenti_covid') { //207
   $answer = "/come_ proteggersi_covid – come ridurre il rischio di infezione
 /lavare_le_mani – come lavare le mani
 /indossare_la_mascherina – come indossare correttamente la mascherina
-/comportamenti_corretti_covid  - comportamenti corretti sui mezzi_ di_ trasporto.";
+/comportamenti_corretti_covid  - comportamenti corretti sui mezzi di trasporto.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
