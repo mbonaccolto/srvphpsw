@@ -1064,6 +1064,72 @@ if ($text == '/normativa_gap') { //125
   echo json_encode($parameters);
 }
 
+
+//---- Sezione Covid19 ----//
+
+if ($text == '/covid') { //201
+  header("Content-Type: application/json");
+  $answer = "Scegli un argomento specifico tra quelli proposti:
+  /il_covid19 - definizione, sintomi e altre info
+  /comportamenti – comportamenti da tenere
+  /scuola_in_sicurezza – il covid e la scuola
+  /falsi_miti_sul_virus – miti da sfatare
+  /informazioni_corrette – collegamenti e informazioni generali
+  /benessere_visivo - La DAD affatica la vista. Cosa fare?
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
+if ($text == '/il_covid19') { //202
+  header("Content-Type: application/json");
+  $answer = "/definizione_covid - definizioni
+/sintomi_comuni_covid - i sintomi più comuni
+/modalita_trasmissione_covid - modalità di trasmissione
+/rischi_covid - rischi
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/definizione_covid') { //203
+  header("Content-Type: application/json");
+  $answer = "
+  La malattia provocata dal nuovo Coronavirus ha un nome: 'COVID-19' (dove 'CO' sta per corona, 'V' per virus, 'D' per disease e '19' indica l'anno in cui si è manifestata).  
+Per_saperne_di_piu_ guarda_questo_video:
+https://www.youtube.com/watch?v=iNdm6kZj6OM&list=PL40Ch8fBUPXsOtlB4BR4Um52hIiJiHrKS&index=3
+  ";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/sintomi_comuni_covid') { //204
+  header("Content-Type: application/json");
+  $answer = "Scarica il file pdf allegato:
+http://www.stopalbullismo.it/wiki/GVRSIoH9G6LBdT_06102020_qualisonoisintomipicomuni.pdf";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+if ($text == '/modalita_trasmissione_covid') { //205
+  header("Content-Type: application/json");
+  $answer = "Il Sars-covid2 si diffonde da persona a persona: 
+•	attraverso oggetti o superfici contaminati 
+•	per contatto stretto con persone infette attraverso secrezioni della bocca e del naso 
+L’utilizzo della mascherina, la distanza fisica e il lavaggio frequente delle mani sono le buone pratiche contro la trasmissione del Covid. 
+Se vuoi saperne di più guarda la pagina del Ministero della Salute dedicata al Coronavirus: 
+http://www.salute.gov.it/nuovocoronavirus";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
+
+
 //---- Altro ----//
 
 if ($text == '/foodgame') {
