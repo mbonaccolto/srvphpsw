@@ -1071,10 +1071,10 @@ if ($text == '/covid') { //201
   header("Content-Type: application/json");
   $answer = "Scegli un argomento specifico tra quelli proposti:
   /il_covid19 - definizione, sintomi e altre info
-  /comportamenti – comportamenti da tenere
+  /comportamenti_covid – comportamenti da tenere
   /scuola_in_sicurezza – il covid e la scuola
   /falsi_miti_sul_virus – miti da sfatare
-  /informazioni_corrette – collegamenti e informazioni generali
+  /informazioni_corrette_covid – collegamenti e informazioni generali
   /benessere_visivo - La DAD affatica la vista. Cosa fare?
   ";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
@@ -1218,7 +1218,7 @@ http://www.stopalbullismo.it/wiki/D2xW439pB6P00G_06102020_comportamenticorrettis
   echo json_encode($parameters);
 }
 
-if ($text == '/scuola_ in_ sicurezza') { //212
+if ($text == '/scuola_in_sicurezza') { //212
   header("Content-Type: application/json");
   $answer = "/buone_pratiche_covid – buone pratiche per una scuola in sicurezza
 /misurare_temperatura – misurare la temperatura a casa
