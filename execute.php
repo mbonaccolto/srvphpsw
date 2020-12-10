@@ -1148,8 +1148,8 @@ if ($text == '/comportamenti_covid') { //207
   header("Content-Type: application/json");
   $answer = "/come_ proteggersi_covid – come ridurre il rischio di infezione
 /lavare_le_mani – come lavare le mani
-/indossare_ la_ mascherina – come indossare correttamente la mascherina
-/comportamenti_ corretti_covid  - comportamenti corretti sui mezzi_ di_ trasporto.";
+/indossare_la_mascherina – come indossare correttamente la mascherina
+/comportamenti_corretti_covid  - comportamenti corretti sui mezzi_ di_ trasporto.";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -1197,7 +1197,7 @@ http://www.stopalbullismo.it/wiki/Am2A2OqeuU5aXR_06102020_lavaggiodellemani.pdf
   echo json_encode($parameters);
 }
 
-if ($text == '/indossare_ la_ mascherina') { //210
+if ($text == '/indossare_la_mascherina') { //210
   header("Content-Type: application/json");
   $answer = "Apri immagine
 http://www.stopalbullismo.it/wiki/ivxov4sGIkeU4m_06102020_comesiindossalamascherina.pdf
