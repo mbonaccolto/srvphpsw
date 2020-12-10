@@ -1280,7 +1280,7 @@ if ($text == '/aiuto_sintomi_covid') { //217
   echo json_encode($parameters);
 }
 
-if ($text == '/falsi_miti_sul_virus_covid') { //218
+if ($text == '/falsi_miti_sul_virus') { //218
   header("Content-Type: application/json");
   $answer = "Alcuni miti da sfatare:
   http://www.stopalbullismo.it/wiki/uwXAQxAt6ux1j7_06102020_FALSIMITISULVIRUS.pdf";
