@@ -1149,7 +1149,8 @@ if ($text == '/comportamenti_covid') { //207
   $answer = "/come_ proteggersi_covid – come ridurre il rischio di infezione
 /lavare_le_mani – come lavare le mani
 /indossare_la_mascherina – come indossare correttamente la mascherina
-/comportamenti_corretti_covid  - comportamenti corretti sui mezzi di trasporto.";
+/comportamenti_corretti_covid  - comportamenti corretti sui mezzi di trasporto;
+/la_pandemia - la pandemia spiegata ai ragazzi";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
@@ -1310,6 +1311,14 @@ http://www.stopalbullismo.it/wiki/igiene_visiva.pdf";
   echo json_encode($parameters);
 }
 
+if ($text == '/la_pandemia') { //221
+  header("Content-Type: application/json");
+  $answer = "La pandemia spiegata ai ragazzi:
+  https://www.youtube.com/watch?v=pnPmKACM1lY&list=PLEthrV3BqAjIanTaR6s5Ih6zjVQ3NO3zv";
+  $parameters = array('chat_id' => $chatId, "text" => $answer);
+  $parameters["method"] = "sendMessage";
+  echo json_encode($parameters);
+}
 
 
 //---- Altro ----//
