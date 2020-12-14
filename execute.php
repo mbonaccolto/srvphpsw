@@ -1212,7 +1212,9 @@ https://www.youtube.com/watch?v=FxBEieinmzc&ab_channel=wikiHow";
 if ($text == '/comportamenti_corretti_covid') { //211
   header("Content-Type: application/json");
   $answer = "Apri il file:
-http://www.stopalbullismo.it/wiki/D2xW439pB6P00G_06102020_comportamenticorrettisuimezziditrasporto.pdf";
+http://www.stopalbullismo.it/wiki/D2xW439pB6P00G_06102020_comportamenticorrettisuimezziditrasporto.pdf
+Guarda il video:
+https://www.youtube.com/watch?v=pnPmKACM1lY&list=PLEthrV3BqAjIanTaR6s5Ih6zjVQ3NO3zv";
   $parameters = array('chat_id' => $chatId, "text" => $answer);
   $parameters["method"] = "sendMessage";
   echo json_encode($parameters);
