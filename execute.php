@@ -18,7 +18,7 @@ $text = isset($message['text']) ? $message['text'] : "";
 
 $text = trim($text);
 $text = strtolower($text);
-
+/*
 if ($text == '/covid') { // 1
   header("Content-Type: application/json");
   $answer = "Scegli un argomento specifico tra quelli proposti:
@@ -281,6 +281,14 @@ http://www.stopalbullismo.it/wiki/oGeJhCCk0TIPMm_14102020_informazionicorrette.p
 // fine comandi
 header("Content-Type: application/json");
 $parameters = array('chat_id' => $chatId, "text" => "Se non utilizzi i comandi mi limito a ripetere ciò che mi hai scritto: ".$text);
+// $parameters = array('chat_id' => $chatId, "text" => $answer);
+$parameters["method"] = "sendMessage";
+echo json_encode($parameters);
+*/
+
+// BOT spento
+header("Content-Type: application/json");
+$parameters = array('chat_id' => $chatId, "text" => "Questo BOT non è più attivo. Ultimo comando digitato: ".$text);
 // $parameters = array('chat_id' => $chatId, "text" => $answer);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
